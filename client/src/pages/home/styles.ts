@@ -7,9 +7,9 @@ export const HomeContainer = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: lefts;
   flex-direction: column;
-
+  background-color: #FBE0A1;
   h1 {
     font-size: 54px;
     color: ${(props) => props.theme.colors.primary};
