@@ -1,3 +1,8 @@
+/* Tip from yasmws: If you find 
+a problem with the react, like it has 2 versions
+of it, you can just open the package.json and type ctrl + s and it disappears.
+*/
+
 import React from "react";
 import { HomeContainer } from './styles';
 import { LogoCITi } from '../../assets';
@@ -6,19 +11,17 @@ import { LogoCITi } from '../../assets';
 export const Home: React.FC = () => {
     return (
         <HomeContainer>
-            <img src={LogoCITi} alt="" />
-            <h1>ReactJS Boilerplate</h1>
-            <p>
-                Made with
-                {' '}
-                <strong>&lt; &#x0002F; &gt;</strong>
-                {' '}
-                and
-                {' '}
-                <strong>&hearts;</strong>
-                {' '}
-                by CITi
-            </p>
+            <body>
+            <nav>
+                <h1>Karuá</h1>
+                <div>
+                    <li><a href="aboutus.asp">Sobre Nós</a></li>
+                    <li><a href="artists.asp">Artistas</a></li>
+                    <li><a href="works.asp">Obras</a></li>
+                    <li><a href="contact.asp">Contato</a></li>
+                </div>
+            </nav>
+            </body>
         </HomeContainer>
     );
 }

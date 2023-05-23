@@ -1,39 +1,45 @@
 import styled from 'styled-components'; 
 
-
 export const HomeContainer = styled.div`
   width: 100vw;
   height: 100vh;
 
+body, h1, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+nav {
+  background-color: #abdb25;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+}
 
-  h1 {
-    font-size: 54px;
-    color: ${(props) => props.theme.colors.primary};
-    margin-top: 40px;
-    text-align: center;
+nav h1 {
+  font-size: 24px;
+  color: #ffffff;
+}
 
-    @media (max-width: 720px) {
-      font-size: 28px;
-    }
-  }
-  
-  p {
+nav ul {
+  list-style: none;
+  display: flex;
+}
 
-    font-size: 20px;
-    margin-top: 24px;
-    line-height: 32px;
+nav li {
+  margin-right: 20px;
+}
 
-    @media (max-width: 720px) {
-      font-size: 16px;
-      margin-top: 0;
-    }
-  }
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-  img {
-    width: 25%;
-  }
+nav a:hover {
+  text-decoration: underline;
+}
+
 `;
