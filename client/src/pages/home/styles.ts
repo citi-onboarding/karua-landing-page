@@ -9,7 +9,7 @@ export const HomeContainer = styled.div`
   justify-content: center;
   align-items: lefts;
   flex-direction: column;
-  background-color: #FBE0A1;
+  background-color: #FFF;
   h1 {
     font-size: 54px;
     color: ${(props) => props.theme.colors.primary};

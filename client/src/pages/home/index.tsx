@@ -1,11 +1,11 @@
 import React from "react";
 import { HomeContainer } from './styles';
-import { SocialMedia } from "../components/socialMedia";
+import { Footer } from "../components/Footer";
 
 export const Home: React.FC = () => {
     return (
         <HomeContainer>
-            <SocialMedia />
+            <Footer />
         </HomeContainer>
     );
 }
