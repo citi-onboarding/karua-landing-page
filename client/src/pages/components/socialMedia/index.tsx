@@ -1,4 +1,4 @@
-import { FacebookIcon, InstaIcon } from "../../../assets"; 
+import { FacebookIcon, InstaIcon, YoutubeIcon } from "../../../assets"; 
 import { FooterContainer, SocialMediaContainer, SocialMediaIcons } from "./style";
 
 
@@ -17,6 +17,14 @@ export const SocialMedia = () => {
                 <SocialMediaContainer>
                     <SocialMediaIcons>
                         <img src={FacebookIcon} alt="Ícone do Facebook"/>
+                    </SocialMediaIcons> 
+                </SocialMediaContainer>
+            </a>
+
+            <a href="https://www.youtube.com/">
+                <SocialMediaContainer>
+                    <SocialMediaIcons>
+                        <img src={YoutubeIcon} alt="Ícone do Youtube"/>
                     </SocialMediaIcons> 
                 </SocialMediaContainer>
             </a>
