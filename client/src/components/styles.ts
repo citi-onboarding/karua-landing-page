@@ -7,27 +7,27 @@ export const NavegBar = styled.div`
   left: 0px;
   top: 0px;
   
-
   background: rgba(245, 177, 19, 0.4);
   box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.25);
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 250px;
+  justify-content: space-between;
+  padding-right: 25%;
+  padding-left: 10%;
 
   font-family: 'Comfortaa', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 100%; // 18px
+  color: #731803 !important;
   line-height: 20px;
   text-align: right;
-
 `;
 
 export const TitleImg = styled.img`
-  margin-top: -5.0%;
-  width: 20%;
+  margin-top: -10.0%;
+  width: 30%;
 `;
 
 export const NavPages = styled.div`
@@ -36,6 +36,12 @@ export const NavPages = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
 `;
 
 export const NavTag = styled.div`
@@ -53,3 +59,5 @@ export const NavButton = styled.button`
   padding: 8px 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
+
+

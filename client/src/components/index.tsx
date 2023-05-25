@@ -13,11 +13,19 @@ export const NavBar: React.FC = () => {
                 alt = ''
             />
             <NavPages>
-                <NavTag>Sobre Nós</NavTag>
-                <NavTag>Artistas</NavTag>
-                <NavTag>Obras</NavTag>
+                <NavTag>
+                    <a href="#">Sobre Nós</a>
+                </NavTag>
+                <NavTag>
+                    <a href="#">Artistas</a>
+                </NavTag>
+                <NavTag>
+                    <a href="#">Obras</a>
+                </NavTag>
                 <NavButton>
-                    <NavTag>Contato</NavTag>
+                    <NavTag>
+                        <a href="#">Contato</a>
+                    </NavTag>
                 </NavButton>
             </NavPages>   
         </NavegBar>
