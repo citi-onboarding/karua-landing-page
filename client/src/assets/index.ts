@@ -1,5 +1,3 @@
 import karuauCOLORIDA from './karuauCOLORIDA.png';
 
-export {
-    karuauCOLORIDA
-};
+export { karuauCOLORIDA };
