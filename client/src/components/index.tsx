@@ -5,7 +5,6 @@ of it, you can just open the package.json and type ctrl + s and it disappears.
 import {NavegBar, TitleImg, NavPages, NavTag, NavButton} from "./styles";
 import { karuauCOLORIDA } from '../assets';
 
-
 export const NavBar: React.FC = () => {
     return(
         <NavegBar>
