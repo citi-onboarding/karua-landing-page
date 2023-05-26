@@ -5,3 +5,4 @@ export const theme = {
       text: '#e1e1e6',
     },
   };
+  
