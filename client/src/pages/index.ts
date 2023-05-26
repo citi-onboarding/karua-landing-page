@@ -1,5 +1,5 @@
 import { Home } from './home';
-import { Footer } from './components/Footer';
+import { Footer } from '../components/Footer';
 
 export {
     Home,
