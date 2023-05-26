@@ -1,5 +1,5 @@
-import LogoCITi from './logo.png';
+import Karuau_BRANCA from '../karuau_BRANCA.png';
 
 export {
-    LogoCITi
+    Karuau_BRANCA
 };

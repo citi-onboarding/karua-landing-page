@@ -1,12 +1,12 @@
 import React from "react";
 import { HomeContainer } from "../Home/styles";
-import { Introduction } from "../../components";
+import { Introd } from "../../components";
 
 
 export const Home: React.FC = () => {
     return (
         <HomeContainer>
-            <Introduction></Introduction>
+            <Introd></Introd>
         </HomeContainer>
     );
 }
