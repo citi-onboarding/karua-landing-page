@@ -1,4 +1,4 @@
-import { Artists } from './../models/Artists';
+import { Artists } from '../models/Artists';
 import { Request, Response } from 'express';
 import { Citi, Crud } from '../global'
 
@@ -58,7 +58,8 @@ export default class ArtistController implements Crud {
             productThree,
             descriptionThree,
             imageThree,
-            linkThree};
+            linkThree
+        };
         const {httpStatus, message} = await Citi.insertIntoDatabase(Artists, newArtist);
 
         return response.status(httpStatus).send({ message });
@@ -72,6 +73,8 @@ export default class ArtistController implements Crud {
     async delete(request: Request, response: Response){
         const { id } = request.params;
         const {value: artistFound, message } = await Citi.findByID(Artists, id); 
+
+        console.log(id);
            
         if(!artistFound) return response.status(400).send({ message });
 
@@ -116,7 +119,8 @@ export default class ArtistController implements Crud {
             descriptionThree,
             imageThree,
             linkThree, 
-            id);
+            id
+            );
         if(isAnyUndefined) return response.status(400).send();
 
         const userWithUpdatedValues = {
