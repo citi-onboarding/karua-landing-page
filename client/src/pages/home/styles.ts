@@ -34,6 +34,6 @@ export const HomeContainer = styled.div`
   }
 
   img {
-    width: 25%;
+    width: 50%;
   }
 `;
