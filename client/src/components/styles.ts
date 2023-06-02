@@ -33,7 +33,6 @@ export const IntroTitle = styled.div`
   text-align: center;
   font-feature-settings: 'tnum' on, 'lnum' on;
   position: relative;
-
   z-index: 1;
   width: 100%;
 `;
@@ -56,7 +55,6 @@ export const BoxText = styled.div`
   text-align: justify;
   justify-content: center;
   align-items: center;
-
   margin-top: 10%;
   margin-bottom: 10%;
   margin-left: 40%;
@@ -90,5 +88,4 @@ export const BoxImage = styled.div`
 `;
 
 export const IntroImg = styled.img`
- 
 `;
