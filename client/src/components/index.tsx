@@ -1,26 +1,78 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
+import {Title, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
 import axios from "axios";
+import { title } from "process";
+
+type CarouselProps = {
+
+    link: string;
+    video: 	string;
+    artist:	string;
+    description:	string;
+    productOne:	string;
+    descriptionOne:	string;
+    imageOne:	string;
+    linkOne:	string;
+    productTwo:	string;
+    descriptionTwo:	string;
+    imageTwo:	string;
+    linkTwo:	string;
+    productThree:	string;
+    descriptionThree:	string;
+    imageThree:	string;
+    linkThree:	string;
+};
 
 
-export const Carousel = () => {
+export const Carousel = ({
+    link,
+    video, 
+    artist,
+    description,
+    productOne,
+    descriptionOne,
+    imageOne,
+    linkOne,
+    productTwo,
+    descriptionTwo,
+    imageTwo,
+    linkTwo,
+    productThree,
+    descriptionThree,
+    imageThree,
+    linkThree}: CarouselProps) => {
     return (
         <CarouselContainer>
             <VideoContainer> 
+                {video}
             </VideoContainer>
             <ArtistComponent>
-                <ArtistName> Yasmin </ArtistName>
-                <ArtistDescription> Uma ceramista jovem e com grandes ambições. Suas obras são caracterizadas pelo uso de cores fortes e formatos não convencionais para o corpo das suas peças, com detalhes inesperados inspirados na fauna e flora locais.</ArtistDescription>
+                <ArtistName> {artist} </ArtistName>
+                <ArtistDescription> {description} </ArtistDescription>
             </ArtistComponent>
             <ProductsComponents>
                     <ProductBox>
-                        <ProductImageBox> </ProductImageBox>
+                        <ProductImageBox><img src = {linkOne} /></ProductImageBox>
                         <InfoProductContainer>
-                            <ProductName> Uma mulher e suas conchas</ProductName>
-                            <ProductDescription> É uma obra de grande valor agregado. É um retrato da própria ceramista e outras mulheres que ficam encantadas com a beleza das conchas.</ProductDescription>
+                            <ProductName> {productOne} </ProductName>
+                            <ProductDescription> {descriptionOne} </ProductDescription>
+                        </InfoProductContainer>
+                    </ProductBox>
+                    <ProductBox>
+                        <ProductImageBox><img src = {linkTwo} /></ProductImageBox>
+                        <InfoProductContainer>
+                            <ProductName> {productTwo} </ProductName>
+                            <ProductDescription> {descriptionTwo} </ProductDescription>
+                        </InfoProductContainer>
+                    </ProductBox>
+                    <ProductBox>
+                        <ProductImageBox><img src = {linkThree} /></ProductImageBox>
+                        <InfoProductContainer>
+                            <ProductName> {productThree} </ProductName>
+                            <ProductDescription> {descriptionThree}  </ProductDescription>
                         </InfoProductContainer>
                     </ProductBox>
             </ProductsComponents>
@@ -28,3 +80,11 @@ export const Carousel = () => {
     );
 }
 
+export const CarouselSection: React.FC = () => {
+    return(
+        <CarouselSectionContainer>
+            <Title>Artistas</Title>
+            <Carousel link={""} video={""} artist={""} description={""} productOne={""} descriptionOne={""} imageOne={""} linkOne={""} productTwo={""} descriptionTwo={""} imageTwo={""} linkTwo={""} productThree={""} descriptionThree={""} imageThree={""} linkThree={""} />
+        </CarouselSectionContainer>
+    );
+}
