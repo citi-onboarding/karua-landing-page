@@ -1,45 +1,113 @@
 import styled from "styled-components";
 
 export const CarouselContainer = styled.div`
-  /* Add your carousel container styles here */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F5F5;
 `;
 
 export const VideoContainer = styled.div`
-  /* Add your video container styles here */
+  
+  position: absolute;
+  width: 615px;
+  height: 371px;
+  left: 27px;
+  top: 0px;
 `;
 
 export const ArtistComponent = styled.div`
-  /* Add your artist component styles here */
+
+  margin-top: 20px;
 `;
 
 export const ArtistName = styled.h1`
-  /* Add your artist name styles here */
+  
+  position: absolute;
+  width: 670px;
+  height: 37px;
+  left: 0px;
+  top: 399px;
+  font-family: 'Xilosa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 83%;
+  text-align: center;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #731803;
 `;
 
 export const ArtistDescription = styled.p`
-  /* Add your artist description styles here */
+ 
+  position: absolute;
+  width: 569px;
+  height: 127px;
+  left: 50px;
+  top: 436px;
+
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: #731803;
 `;
 
 export const ProductsComponents = styled.div`
-  /* Add your products components styles here */
+ 
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const ProductBox = styled.div`
-  /* Add your product box styles here */
+  
 `;
 
 export const ProductImageBox = styled.div`
-  /* Add your product image box styles here */
+  
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 59px;
+  top: 617px;
 `;
 
 export const InfoProductContainer = styled.div`
-  /* Add your info product container styles here */
+  
 `;
 
 export const ProductName = styled.h2`
-  /* Add your product name styles here */
+  
+  position: absolute;
+  width: 123px;
+  height: 35px;
+  left: 229px;
+  top: 617px;
+  font-family: 'Xilosa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 83%;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #731803;
+
 `;
 
 export const ProductDescription = styled.p`
-  /* Add your product description styles here */
+ 
+  position: absolute;
+  width: 392px;
+  height: 127px;
+  left: 229px;
+  top: 668px;
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  color: #731803;
 `;

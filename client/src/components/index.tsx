@@ -12,15 +12,15 @@ export const Carousel = () => {
             <VideoContainer> 
             </VideoContainer>
             <ArtistComponent>
-                <ArtistName> </ArtistName>
-                <ArtistDescription> </ArtistDescription>
+                <ArtistName> Yasmin </ArtistName>
+                <ArtistDescription> Uma ceramista jovem e com grandes ambições. Suas obras são caracterizadas pelo uso de cores fortes e formatos não convencionais para o corpo das suas peças, com detalhes inesperados inspirados na fauna e flora locais.</ArtistDescription>
             </ArtistComponent>
             <ProductsComponents>
                     <ProductBox>
                         <ProductImageBox> </ProductImageBox>
                         <InfoProductContainer>
-                            <ProductName> </ProductName>
-                            <ProductDescription> </ProductDescription>
+                            <ProductName> Uma mulher e suas conchas</ProductName>
+                            <ProductDescription> É uma obra de grande valor agregado. É um retrato da própria ceramista e outras mulheres que ficam encantadas com a beleza das conchas.</ProductDescription>
                         </InfoProductContainer>
                     </ProductBox>
             </ProductsComponents>
