@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import {Title, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
-import { videoKarua2 } from "./videoKarua2.mp4";
+import { videoKarua2 } from "../../assets";
 import axios from "axios";
 import { title } from "process";
 
