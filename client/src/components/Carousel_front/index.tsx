@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import {Title, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
+import { videoKarua2 } from "./videoKarua2.mp4";
 import axios from "axios";
 import { title } from "process";
 
@@ -84,7 +85,24 @@ export const CarouselSection: React.FC = () => {
     return(
         <CarouselSectionContainer>
             <Title>Artistas</Title>
-            <Carousel link={""} video={""} artist={""} description={""} productOne={""} descriptionOne={""} imageOne={""} linkOne={""} productTwo={""} descriptionTwo={""} imageTwo={""} linkTwo={""} productThree={""} descriptionThree={""} imageThree={""} linkThree={""} />
+            <Carousel 
+            link={""}
+            video={"videoKarua2"}
+            artist={""}
+            description={""}
+            productOne={""}
+            descriptionOne={""}
+            imageOne={""}
+            linkOne={""}
+            productTwo={""}
+            descriptionTwo={""}
+            imageTwo={""}
+            linkTwo={""}
+            productThree={""}
+            descriptionThree={""}
+            imageThree={""}
+            linkThree={""} 
+            />
         </CarouselSectionContainer>
     );
 }
