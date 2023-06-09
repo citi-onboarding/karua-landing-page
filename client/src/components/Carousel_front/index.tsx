@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import {Title, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
-import { videoKarua2 } from "../../assets";
+import videoKarua2  from "../../assets/videoKarua2.mp4";
+import {arte1, arte2, arte3} from "../../assets";
+
 import axios from "axios";
 import { title } from "process";
 
@@ -27,7 +29,6 @@ type CarouselProps = {
     linkThree:	string;
 };
 
-
 export const Carousel = ({
     link,
     video, 
@@ -48,7 +49,7 @@ export const Carousel = ({
     return (
         <CarouselContainer>
             <VideoContainer> 
-                {video}
+                <video src={video} autoPlay loop muted />
             </VideoContainer>
             <ArtistComponent>
                 <ArtistName> {artist} </ArtistName>
@@ -87,20 +88,20 @@ export const CarouselSection: React.FC = () => {
             <Title>Artistas</Title>
             <Carousel 
             link={""}
-            video={"videoKarua2"}
+            video={videoKarua2}
             artist={""}
             description={""}
             productOne={""}
             descriptionOne={""}
-            imageOne={""}
+            imageOne={arte1}
             linkOne={""}
             productTwo={""}
             descriptionTwo={""}
-            imageTwo={""}
+            imageTwo={arte2}
             linkTwo={""}
             productThree={""}
             descriptionThree={""}
-            imageThree={""}
+            imageThree={arte3}
             linkThree={""} 
             />
         </CarouselSectionContainer>

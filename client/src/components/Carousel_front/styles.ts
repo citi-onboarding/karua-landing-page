@@ -23,6 +23,11 @@ export const CarouselContainer = styled.div`
 
 export const VideoContainer = styled.div`
   position: absolute;
+  width: 615px;
+  height: 371px;
+  left: 850px;
+  top: 0px;
+
   border-radius: 25px 25px 0px 0px;  
 `;
 
