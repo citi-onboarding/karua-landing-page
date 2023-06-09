@@ -1,60 +1,57 @@
 import styled from "styled-components";
 
+export const CarouselBox = styled.div`
+  flex-direction: row; 
+  display: flex;
+  gap: 200px;
+`;
+
 export const CarouselSectionContainer = styled.div`
   background: #F5F5F5;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
 `;
 
 export const Title = styled.div`
-  position: absolute;
   font-family: 'Xilosa';
   font-style: normal;
-  font-weight: 400;
   font-size: 48px;
-  line-height: 30px;
   text-align: center;
   color: #731803;
 `;
 
 export const CarouselContainer = styled.div`
-  position: absolute;
   background: rgba(245, 177, 19, 0.4);
-  border-radius: 0px 0px 25px 25px;
+  border-radius: 25px 25px 25px 25px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
 `;
 
-export const VideoContainer = styled.div`
-  position: absolute;
-  width: 615px;
-  height: 371px;
-  left: 850px;
-  top: 0px;
+export const VideoContainer = styled.div` 
+  border-radius: 25px 25px 0px 0px;
+`;
 
-  border-radius: 25px 25px 0px 0px;  
+export const Video = styled.video`
+  border-radius: 25px 25px 0px 0px;
 `;
 
 export const ArtistComponent = styled.div`
-
+  text-align: center;
+  flex-direction: column; 
+  align-items: center; 
 `;
 
 export const ArtistName = styled.div`
-  position: absolute;
   font-family: 'Xilosa';
-  font-style: normal;
-  font-weight: 400;
   font-size: 36px;
-  line-height: 30px;
-  text-align: center;
-  font-feature-settings: 'tnum' on, 'lnum' on;
   color: #731803;
 `;
 
 export const ArtistDescription = styled.div`
-  position: absolute;
   font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 125%;
-  text-align: center;
   color: #731803;
 `;
 
@@ -62,44 +59,40 @@ export const ProductsComponents = styled.div`
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  flex-direction: column; 
+  align-items: center; 
 `;
 
 export const ProductBox = styled.div`
+  display: flex;
+  text-align: center;
+  flex-direction: row; 
+  align-items: center; 
 `;
 
 export const ProductImageBox = styled.div`
-  
-  position: absolute;
   border-radius: 25px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 `;
 
 export const InfoProductContainer = styled.div`
-  position: absolute;
   font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  flex-direction: column; 
+  align-items: center; 
   color: #731803;
 `;
 
 export const ProductName = styled.div`
-  position: absolute;
   font-family: 'Xilosa';
-  font-style: normal;
-  font-weight: 400;
   font-size: 36px;
-  line-height: 83%;
-  font-feature-settings: 'tnum' on, 'lnum' on;
   color: #731803;
 `;
 
 export const ProductDescription = styled.div`
-  position: absolute;
   font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 125%;
   color: #731803;
 `;

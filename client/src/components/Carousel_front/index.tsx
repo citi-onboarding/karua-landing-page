@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {Title, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
+import {Title, Video, CarouselBox, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
 import videoKarua2  from "../../assets/videoKarua2.mp4";
@@ -49,7 +49,7 @@ export const Carousel = ({
     return (
         <CarouselContainer>
             <VideoContainer> 
-                <video src={video} autoPlay loop muted />
+                <Video src={video} autoPlay loop muted style={{width: "100%", height: "auto" }} />
             </VideoContainer>
             <ArtistComponent>
                 <ArtistName> {artist} </ArtistName>
@@ -57,21 +57,21 @@ export const Carousel = ({
             </ArtistComponent>
             <ProductsComponents>
                     <ProductBox>
-                        <ProductImageBox><img src = {linkOne} /></ProductImageBox>
+                        <ProductImageBox><img src = {imageOne} /></ProductImageBox>
                         <InfoProductContainer>
                             <ProductName> {productOne} </ProductName>
                             <ProductDescription> {descriptionOne} </ProductDescription>
                         </InfoProductContainer>
                     </ProductBox>
                     <ProductBox>
-                        <ProductImageBox><img src = {linkTwo} /></ProductImageBox>
+                        <ProductImageBox><img src = {imageTwo} /></ProductImageBox>
                         <InfoProductContainer>
                             <ProductName> {productTwo} </ProductName>
                             <ProductDescription> {descriptionTwo} </ProductDescription>
                         </InfoProductContainer>
                     </ProductBox>
                     <ProductBox>
-                        <ProductImageBox><img src = {linkThree} /></ProductImageBox>
+                        <ProductImageBox><img src = {imageThree} /></ProductImageBox>
                         <InfoProductContainer>
                             <ProductName> {productThree} </ProductName>
                             <ProductDescription> {descriptionThree}  </ProductDescription>
@@ -82,28 +82,79 @@ export const Carousel = ({
     );
 }
 
+export const TitleSection: React.FC = () => {
+    return(
+        <Title>Artistas</Title>
+    );
+}
+
 export const CarouselSection: React.FC = () => {
     return(
-        <CarouselSectionContainer>
-            <Title>Artistas</Title>
-            <Carousel 
-            link={""}
-            video={videoKarua2}
-            artist={""}
-            description={""}
-            productOne={""}
-            descriptionOne={""}
-            imageOne={arte1}
-            linkOne={""}
-            productTwo={""}
-            descriptionTwo={""}
-            imageTwo={arte2}
-            linkTwo={""}
-            productThree={""}
-            descriptionThree={""}
-            imageThree={arte3}
-            linkThree={""} 
-            />
-        </CarouselSectionContainer>
+        <CarouselBox>
+
+            <CarouselSectionContainer>
+                <Carousel 
+                link={""}
+                video={videoKarua2}
+                artist={"Yasmin Soares"}
+                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+                productOne={"Nome da Arte1"}
+                descriptionOne={"Descrição da Arte1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageOne={arte1}
+                linkOne={""}
+                productTwo={"Nome da Arte2"}
+                descriptionTwo={"Descrição da Arte2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageTwo={arte2}
+                linkTwo={""}
+                productThree={"Nome da Arte3"}
+                descriptionThree={"Descrição da Arte3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. "}
+                imageThree={arte3}
+                linkThree={""} 
+                />
+            </CarouselSectionContainer>
+
+            <CarouselSectionContainer>
+                <Carousel 
+                link={""}
+                video={videoKarua2}
+                artist={"Yasmin Soares"}
+                description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+                productOne={"Nome da Arte1"}
+                descriptionOne={"Descrição da Arte1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageOne={arte1}
+                linkOne={""}
+                productTwo={"Nome da Arte2"}
+                descriptionTwo={"Descrição da Arte2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageTwo={arte2}
+                linkTwo={""}
+                productThree={"Nome da Arte3"}
+                descriptionThree={"Descrição da Arte3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageThree={arte3}
+                linkThree={""} 
+                />
+            </CarouselSectionContainer>
+
+            <CarouselSectionContainer>
+                <Carousel 
+                link={""}
+                video={videoKarua2}
+                artist={"Yasmin Soares"}
+                description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+                productOne={"Nome da Arte1"}
+                descriptionOne={"Descrição da Arte1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageOne={arte1}
+                linkOne={""}
+                productTwo={"Nome da Arte2"}
+                descriptionTwo={"Descrição da Arte2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageTwo={arte2}
+                linkTwo={""}
+                productThree={"Nome da Arte3"}
+                descriptionThree={"Descrição da Arte3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageThree={arte3}
+                linkThree={""} 
+                />
+            </CarouselSectionContainer>
+
+        </CarouselBox>
     );
 }
