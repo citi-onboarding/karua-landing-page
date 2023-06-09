@@ -98,4 +98,5 @@ export const ProductDescription = styled.div`
   font-family: 'Comfortaa';
   font-size: 16px;
   color: #731803;
+  
 `;
