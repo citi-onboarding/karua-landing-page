@@ -91,7 +91,7 @@ export const TitleSection: React.FC = () => {
 export const CarouselSection: React.FC = () => {
     return(
         <CarouselBox>
-
+            
             <CarouselSectionContainer>
                 <Carousel 
                 link={""}
@@ -113,7 +113,7 @@ export const CarouselSection: React.FC = () => {
                 />
             </CarouselSectionContainer>
 
-            <CarouselSectionContainer>
+            {/* <CarouselSectionContainer>
                 <Carousel 
                 link={""}
                 video={videoKarua2}
@@ -154,6 +154,7 @@ export const CarouselSection: React.FC = () => {
                 linkThree={""} 
                 />
             </CarouselSectionContainer>
+             */}
 
         </CarouselBox>
     );

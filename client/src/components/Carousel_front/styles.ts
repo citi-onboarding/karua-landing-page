@@ -25,6 +25,8 @@ export const CarouselContainer = styled.div`
   background: rgba(245, 177, 19, 0.4);
   border-radius: 25px 25px 25px 25px;
   display: flex; 
+  width: 620px;
+  height: auto;
   flex-direction: column; 
   align-items: center; 
 `;
@@ -39,6 +41,7 @@ export const Video = styled.video`
 
 export const ArtistComponent = styled.div`
   text-align: center;
+  display: flex;
   flex-direction: column; 
   align-items: center; 
 `;
