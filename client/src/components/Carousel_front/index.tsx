@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {Title, Video, CarouselBox, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
+import {SameLevel, Title, Video, CarouselBox, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
 import videoKarua2  from "../../assets/videoKarua2.mp4";
@@ -82,16 +82,19 @@ export const Carousel = ({
     );
 }
 
-export const TitleSection: React.FC = () => {
+export const CarouselPage: React.FC = () => {
     return(
-        <Title>Artistas</Title>
+        <SameLevel>
+            <Title>Artistas</Title>
+            <CarouselSection/>
+        </SameLevel>
     );
 }
+
 
 export const CarouselSection: React.FC = () => {
     return(
         <CarouselBox>
-            
             <CarouselSectionContainer>
                 <Carousel 
                 link={""}
@@ -99,36 +102,15 @@ export const CarouselSection: React.FC = () => {
                 artist={"Yasmin Soares"}
                 description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
                 productOne={"Nome da Arte1"}
-                descriptionOne={"Descrição da Arte1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                descriptionOne={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
                 imageOne={arte1}
                 linkOne={""}
                 productTwo={"Nome da Arte2"}
-                descriptionTwo={"Descrição da Arte2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                descriptionTwo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
                 imageTwo={arte2}
                 linkTwo={""}
                 productThree={"Nome da Arte3"}
-                descriptionThree={"Descrição da Arte3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. "}
-                imageThree={arte3}
-                linkThree={""} 
-                />
-            </CarouselSectionContainer>
-
-            {/* <CarouselSectionContainer>
-                <Carousel 
-                link={""}
-                video={videoKarua2}
-                artist={"Yasmin Soares"}
-                description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-                productOne={"Nome da Arte1"}
-                descriptionOne={"Descrição da Arte1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageOne={arte1}
-                linkOne={""}
-                productTwo={"Nome da Arte2"}
-                descriptionTwo={"Descrição da Arte2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageTwo={arte2}
-                linkTwo={""}
-                productThree={"Nome da Arte3"}
-                descriptionThree={"Descrição da Arte3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                descriptionThree={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. "}
                 imageThree={arte3}
                 linkThree={""} 
                 />
@@ -141,21 +123,40 @@ export const CarouselSection: React.FC = () => {
                 artist={"Yasmin Soares"}
                 description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
                 productOne={"Nome da Arte1"}
-                descriptionOne={"Descrição da Arte1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                descriptionOne={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
                 imageOne={arte1}
                 linkOne={""}
                 productTwo={"Nome da Arte2"}
-                descriptionTwo={"Descrição da Arte2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                descriptionTwo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
                 imageTwo={arte2}
                 linkTwo={""}
                 productThree={"Nome da Arte3"}
-                descriptionThree={"Descrição da Arte3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                descriptionThree={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
                 imageThree={arte3}
                 linkThree={""} 
                 />
             </CarouselSectionContainer>
-             */}
 
+            <CarouselSectionContainer>
+                <Carousel 
+                link={""}
+                video={videoKarua2}
+                artist={"Yasmin Soares"}
+                description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+                productOne={"Nome da Arte1"}
+                descriptionOne={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageOne={arte1}
+                linkOne={""}
+                productTwo={"Nome da Arte2"}
+                descriptionTwo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageTwo={arte2}
+                linkTwo={""}
+                productThree={"Nome da Arte3"}
+                descriptionThree={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
+                imageThree={arte3}
+                linkThree={""} 
+                />
+            </CarouselSectionContainer>
         </CarouselBox>
     );
 }
