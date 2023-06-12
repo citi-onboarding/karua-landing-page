@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeContainer } from "../Home/styles";
+import { HomeContainer } from "../home/styles";
 import { Introd } from "../../components";
 
 
