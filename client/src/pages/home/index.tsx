@@ -9,5 +9,3 @@ export const Home: React.FC = () => {
         <HomeContainer>
             <Introd></Introd>
         </HomeContainer>
-    );
-}
