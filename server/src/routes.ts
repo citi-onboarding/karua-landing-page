@@ -1,6 +1,7 @@
 import express from 'express';
 import UserController from '@controllers/UserController'
 import ArtistController from '@controllers/ArtistsController';
+import SendEmail from '@controllers/mailController'
 
 const routes = express.Router();
 const userController = new UserController();
@@ -15,6 +16,8 @@ routes.post('/artist', artistController.create);
 routes.get('/artist', artistController.get);
 routes.delete('/artist/:id', artistController.delete);
 routes.put('/artist/:id', artistController.update);
+
+routes.post('/mail', SendEmail);
 
 
 export default routes;
