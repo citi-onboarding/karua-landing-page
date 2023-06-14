@@ -15,7 +15,6 @@ export const IntroBackground = styled.div`
 `;
 
 export const Video = styled.video`
-  width: 100%;
   height: 100%;
   object-fit: cover;
 `;
@@ -67,16 +66,16 @@ export const IntroText = styled.div`
 `;
 
 export const BoxImage = styled.div`
-  height: 50%;
+  height: 70%;
   align-items: space around;
   justify-content: center;
   display: flex;
-  margin-top: 10%;
+  margin-top: 0%;
   margin-right: 0 important!; 
   margin-left: 0 important!;
 `;
 
 export const IntroImg = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 `;
