@@ -1,13 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import {SameLevel, Title, Video, CarouselBox, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
 import videoKarua2  from "../../assets/videoKarua2.mp4";
 import {arte1, arte2, arte3} from "../../assets";
-
-import axios from "axios";
-import { title } from "process";
 
 type CarouselProps = {
 
@@ -116,7 +112,7 @@ export const CarouselSection: React.FC = () => {
                 />
             </CarouselSectionContainer>
 
-            <CarouselSectionContainer>
+            {/* <CarouselSectionContainer>
                 <Carousel 
                 link={""}
                 video={videoKarua2}
@@ -156,7 +152,7 @@ export const CarouselSection: React.FC = () => {
                 imageThree={arte3}
                 linkThree={""} 
                 />
-            </CarouselSectionContainer>
+            </CarouselSectionContainer> */}
         </CarouselBox>
     );
 }

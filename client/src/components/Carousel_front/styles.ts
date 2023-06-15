@@ -6,8 +6,9 @@ export const SameLevel = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+  // gap: 40px;
+  width: 100%;
+  height: 100%;
 `;
 
 export const CarouselBox = styled.div`
@@ -71,6 +72,8 @@ export const ArtistDescription = styled.div`
   font-family: 'Comfortaa';
   font-size: 16px;
   color: #731803;
+  padding-left: 2%;
+  padding-right: 2%;
 
 `;
 
