@@ -1,7 +1,6 @@
 import React from "react";
 import { HomeContainer } from './styles';
-import { LogoCITi } from '../../assets';
-import { Intro } from "../../components/Introduction/styles";
+import {Introd} from "../../components/Introduction";
 
 
 export const Home: React.FC = () => {
@@ -9,3 +8,5 @@ export const Home: React.FC = () => {
         <HomeContainer>
             <Introd></Introd>
         </HomeContainer>
+    )
+}
