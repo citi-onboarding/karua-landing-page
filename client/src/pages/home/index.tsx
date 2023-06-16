@@ -1,6 +1,6 @@
 import React from "react";
 import { HomeContainer } from './styles';
-import { Footer, Carousel, NavBar } from "../../components";
+import { Footer, Carousel, NavBar, SubscriptionComponent} from "../../components";
 
 
 
@@ -9,6 +9,7 @@ export const Home: React.FC = () => {
         <HomeContainer>
             <NavBar></NavBar>
             <Carousel />
+            <SubscriptionComponent />
             <Footer />
         </HomeContainer>
     );
