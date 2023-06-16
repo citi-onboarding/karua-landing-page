@@ -1,4 +1,5 @@
 import { ContainerPage, ImageText, OutputImage, CarouselStyled } from './style';
+import React from "react";
 
 export const Carousel = () => {
   const storyArray = [
