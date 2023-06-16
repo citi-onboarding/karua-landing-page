@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionForm, StyledSubscriptionField, StyledButton } from "./styles";
+import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionForm, StyledSubscriptionField, StyledButton, ButtonContainer, FormContainer, FormTitle } from "./styles";
 //import apiAxios from "../../services/api";
 import axios from "axios";
 
@@ -21,17 +21,15 @@ type Subscription = {
 
 export const SubscriptionComponent: React.FC = () => {
     return (
-        <StyledSubscriptionComponent>
-            
-            <SubscriptionContainer>
-                <h2 id="Forms">
-                    Inscreva-se no nosso programa
-                </h2>
+        <FormContainer>
+            <FormTitle>GOSTARIA DE ADQUIRIR UMA PEÇA? FALE CONOSCO!</FormTitle>
+            <StyledSubscriptionComponent>         
+                <SubscriptionContainer>
+                    <SubscriptionForm />
+                </SubscriptionContainer>
 
-                <SubscriptionForm />
-            </SubscriptionContainer>
-
-        </StyledSubscriptionComponent>
+            </StyledSubscriptionComponent>
+        </FormContainer>
     );
 }
 
@@ -156,12 +154,11 @@ const SubscriptionForm: React.ElementType = () => {
                 onChangeFunction={setSolutionDescribe}
             />
 
-
-            <StyledButton>
-                <button>
-                    Enviar
-                </button>
-            </StyledButton>
+            <ButtonContainer>
+                <StyledButton>             
+                        ENVIAR
+                </StyledButton>
+            </ButtonContainer>
         </StyledSubscriptionForm>
     );
 }

@@ -1,5 +1,6 @@
 import { FacebookIcon, InstaIcon, YoutubeIcon } from "../../assets"; 
 import { CenterContainer, FooterContainer, SocialMediaContainer, SocialMediaIcons } from "./style";
+import React from 'react'
 
 
 export const Footer = () => {

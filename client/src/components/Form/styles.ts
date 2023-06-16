@@ -12,11 +12,13 @@ export const SubscriptionContainer = styled.div`
     justify-content: center;
     align-items: center;
     
-    width: 804px;
+    height: 515px;
+    width: 1181px;
+    border-radius: 20px;
+
     padding: 30px 60px;
 
-    background-color: #fff;
-    color: #000;
+    background-color: #731803;
 
     h2{
         font-size: 45px;
@@ -45,14 +47,10 @@ export const StyledSubscriptionForm = styled.div`
 export const StyledSubscriptionField = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
+    justify-content: center;
+    align-items: center;
+    color: #731803;
     margin: 20px 0;
-    
-    label{
-        font-size: 28px;
-    }
     
     input{
 
@@ -65,12 +63,17 @@ export const StyledSubscriptionField = styled.div`
         padding: 15px;
         
         border: none;
-        border-radius: 5px;
+        border-radius: 20px;
 
-        background-color: rgba(36, 158, 231, 0.16);
+        background-color: #F5F5F5;
+        
 
         #solutionDescribe{
             min-height: 120px;
+        }
+
+        input::placeholder {
+            color: red;
         }
 
         @media (max-width: 500px) {
@@ -79,29 +82,37 @@ export const StyledSubscriptionField = styled.div`
     }
 `;
 
-export const StyledButton = styled.div`
+export const StyledButton = styled.button`
     display: flex;
 
-    width: fit-content;
+    width: 223px;
+    height: 55px;
     
-    border-radius: 5px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
     
-    background-color: #ff2c7d;
-    color: #fff;
-    
-    button{
+    background-color: #F5B113;
+    color: #731803;
+    border: none;
+`;
 
-        font-size: 24px;
-        
-        padding: 10px;
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
-        border: none;
+export const FormContainer = styled.div`
+    display: flex;
+    flex-direction: column;
 
-        background-color: transparent;
-        color: #fff;
-    }
+`;
 
-    :hover{
-        background-color: #ff2c7dcc;
-    }
+export const FormTitle = styled.h1`
+    font-family: Xilosa;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    color: #731803;
 `;
