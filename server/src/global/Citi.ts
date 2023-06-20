@@ -58,11 +58,10 @@ export default class Citi {
 
     static async findByID<Type>(entity: EntityTarget<Type>, id: string): Promise<FindalbeDatabaseValue<Type>> {
         try {
-            const entityID = Number(id);
             const entityRepository = connection.getRepository(entity);
             const valueFound = await entityRepository.find({
                 where: {
-                    id: entityID
+                    id,
                 }
             })
 
