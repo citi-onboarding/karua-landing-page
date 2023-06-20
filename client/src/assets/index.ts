@@ -1,5 +1,7 @@
-import Karuau_BRANCA from '../karuau_BRANCA.png';
+import Karua_BRANCA from '../karuau_BRANCA.png';
+import videoKarua from '../videoKarua.mp4';
 
 export {
-    Karuau_BRANCA
+    Karua_BRANCA,
+    videoKarua,
 };

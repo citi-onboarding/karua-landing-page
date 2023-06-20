@@ -1,16 +1,13 @@
-/* Tip from @yasmws: If you find 
-a problem with the react, like it has 2 versions
-of it, you can just open the package.json and type ctrl + s and it disappears.
-*/
-import Karuau_BRANCA from "../../assets/karuau_BRANCA.png";
+import  Karua_BRANCA  from "../../assets/karua_BRANCA.png";
 import { Intro, Video, BoxText, BoxImage, SameLevel, IntroBackground, IntroTitle, IntroTitleText, IntroText, IntroImg } from "./styles";
-import VideoKarua from './videoKarua.mp4';
+import  videoKarua  from "../../assets/videoKarua.mp4";
 
-export const Introd: React.ElementType = ({}) => {
+
+export const Introd: React.ElementType = () => {
     return (
         <Intro>
             <IntroBackground>
-                <Video src={VideoKarua} autoPlay loop muted style={{ width: "100%" }} />
+                <Video src={ videoKarua } autoPlay loop muted style={{ width: "100%" }} />
             </IntroBackground>
             <IntroTitle> QUEM SOMOS? </IntroTitle>
             <SameLevel>
@@ -24,7 +21,7 @@ export const Introd: React.ElementType = ({}) => {
                     </IntroText>
                 </BoxText>
                 <BoxImage>
-                    <IntroImg src={Karuau_BRANCA}/>
+                    <IntroImg src={Karua_BRANCA}/>
                 </BoxImage>
             </SameLevel>
         </Intro>

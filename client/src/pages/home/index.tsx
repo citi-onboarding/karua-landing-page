@@ -1,6 +1,6 @@
 import React from "react";
 import { HomeContainer } from './styles';
-import {Introd} from "../../components/Introduction";
+import {Introd} from "../../components";
 
 
 export const Home: React.FC = () => {
