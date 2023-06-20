@@ -1,9 +1,5 @@
-/* Tip from @yasmws: If you find 
-a problem with the react, like it has 2 versions
-of it, you can just open the package.json and type ctrl + s and it disappears.
-*/
 import {NavegBar, TitleImg, NavPages, NavTag, NavButton} from "./styles";
-import { karuauCOLORIDA } from '../../assets';
+import { karuaCOLORIDA } from '../../assets';
 import React from "react";
 
 
@@ -11,7 +7,7 @@ export const NavBar: React.FC = () => {
     return(
         <NavegBar>
             <TitleImg
-                src = { karuauCOLORIDA }
+                src = { karuaCOLORIDA }
                 alt = ''
             />
             <NavPages>

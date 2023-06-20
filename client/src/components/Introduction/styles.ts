@@ -1,17 +1,20 @@
 import styled from 'styled-components';
+import videoKarua from '../../assets/videoKarua.mp4'
 
 export const Intro = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  height: 745px;
 `;
 
 export const IntroBackground = styled.div`
-  position: fixed;
-  width: 1920px;
+  position: absolute;
+  width: 100%;
   height: 745px;
-  z-index: -1;
+  z-index: -2;
+  //padding-top: 105px;
 `;
 
 export const Video = styled.video`
@@ -78,4 +81,13 @@ export const BoxImage = styled.div`
 export const IntroImg = styled.img`
   width: 400px;
   height: 400px;
+`;
+
+export const IntroContent = styled.div`
+  display: flex;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'; 
 
 export const HomeContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
 
@@ -10,7 +10,7 @@ body, h1, ul {
   padding: 0;
 }
 
-  display: flex;
+  //display: flex;
   justify-content: center;
   flex-direction: column;
 
