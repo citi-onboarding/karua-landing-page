@@ -1,5 +1,6 @@
-import { FacebookIcon, InstaIcon, YoutubeIcon } from "../../assets"; 
+import { FacebookIcon, InstaIcon, YoutubeIcon, TikTokIcon } from "../../assets"; 
 import { CenterContainer, FooterContainer, SocialMediaContainer, SocialMediaIcons } from "./style";
+import React from "react";
 
 
 export const Footer = () => {
@@ -20,6 +21,9 @@ export const Footer = () => {
 
                 <a href="https://www.youtube.com/channel/UC9ffPWlR4RJ4ymkfWg2DZzg">
                     <img src={YoutubeIcon} alt="Ícone do Youtube"/>
+                </a>
+                <a href="https://www.tiktok.com/@karua.arte">
+                    <img src={TikTokIcon} alt="Ícone do Youtube"/>
                 </a>
             </CenterContainer>
         </FooterContainer>
