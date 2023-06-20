@@ -8,13 +8,13 @@ export const SameLevel = styled.div`
   justify-content: center;
   // gap: 40px;
   width: 100%;
-  height: 100%;
+  //height: 100%;
 `;
 
 export const CarouselBox = styled.div`
   flex-direction: row; 
   display: flex;
-  gap: 200px;
+  //gap: 200px;
 `;
 
 export const CarouselSectionContainer = styled.div`
@@ -26,7 +26,7 @@ export const CarouselSectionContainer = styled.div`
 export const Title = styled.div`
   font-family: 'Xilosa';
   font-style: normal;
-  font-size: 48px;
+  font-size: 44px;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -37,7 +37,7 @@ export const CarouselContainer = styled.div`
   background: rgba(245, 177, 19, 0.4);
   border-radius: 25px 25px 25px 25px;
   display: flex; 
-  width: 620px;
+  width: 580px;
   height: 100%;
   flex-direction: column; 
   align-items: center; 
@@ -64,13 +64,13 @@ export const ArtistComponent = styled.div`
 export const ArtistName = styled.div`
   margin-top: 20px;
   font-family: 'Xilosa';
-  font-size: 36px;
+  font-size: 32px;
   color: #731803;
 `;
 
 export const ArtistDescription = styled.div`
   font-family: 'Comfortaa';
-  font-size: 16px;
+  font-size: 14px;
   color: #731803;
   padding-left: 2%;
   padding-right: 2%;
@@ -94,8 +94,8 @@ export const ProductBox = styled.div`
 
 export const ProductImageBox = styled.div`
   border-radius: 25px;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
 `;
 
@@ -115,12 +115,12 @@ export const ProductName = styled.div`
   font-family: 'Xilosa';
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 36px;
+  font-size: 32px;
   color: #731803;
 `;
 
 export const ProductDescription = styled.div`
   font-family: 'Comfortaa';
-  font-size: 16px;
+  font-size: 14px;
   color: #731803;
 `;
