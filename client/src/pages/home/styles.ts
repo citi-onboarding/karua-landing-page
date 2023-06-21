@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 
 body, h1, ul {
