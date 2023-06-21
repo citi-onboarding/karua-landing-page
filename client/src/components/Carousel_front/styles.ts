@@ -6,27 +6,25 @@ export const SameLevel = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // gap: 40px;
   width: 100%;
-  //height: 100%;
 `;
 
 export const CarouselBox = styled.div`
   flex-direction: row; 
   display: flex;
-  //gap: 200px;
 `;
 
 export const CarouselSectionContainer = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center; 
+  padding-bottom: 100px !important;
 `;
 
 export const Title = styled.div`
   font-family: 'Xilosa';
   font-style: normal;
-  font-size: 44px;
+  font-size: 46px;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -37,10 +35,11 @@ export const CarouselContainer = styled.div`
   background: rgba(245, 177, 19, 0.4);
   border-radius: 25px 25px 25px 25px;
   display: flex; 
-  width: 580px;
-  height: 100%;
+  width: 550px;
+  height: 1040px;
   flex-direction: column; 
   align-items: center; 
+  padding-bottom: 100px !important;
 `;
 
 export const VideoContainer = styled.div` 
@@ -49,8 +48,8 @@ export const VideoContainer = styled.div`
 
 export const Video = styled.video`
   border-radius: 25px 25px 0px 0px;
-  width: 615px;
-  height: 371px;
+  width: 530px;
+  height: 360px;
 `;
 
 export const ArtistComponent = styled.div`
@@ -64,16 +63,16 @@ export const ArtistComponent = styled.div`
 export const ArtistName = styled.div`
   margin-top: 20px;
   font-family: 'Xilosa';
-  font-size: 32px;
+  font-size: 36px;
   color: #731803;
 `;
 
 export const ArtistDescription = styled.div`
   font-family: 'Comfortaa';
-  font-size: 14px;
+  font-size: 18px;
   color: #731803;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
 
 `;
 
@@ -94,19 +93,19 @@ export const ProductBox = styled.div`
 
 export const ProductImageBox = styled.div`
   border-radius: 25px;
-  width: 120px;
-  height: 120px;
+  width: 135px;
+  height: 135px;
   overflow: hidden;
 `;
 
 export const InfoProductContainer = styled.div`
   font-family: 'Comfortaa';
-  font-size: 16px;
-  gap: 10px;
+  font-size: 18px;
+  gap: 8px;
   margin-left: 10px;
   flex-direction: column; 
   text-align: left;
-  width: 392px;
+  width: 360px;
   height: 127px;
   color: #731803;
 `;
@@ -115,12 +114,12 @@ export const ProductName = styled.div`
   font-family: 'Xilosa';
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 32px;
+  font-size: 34px;
   color: #731803;
 `;
 
 export const ProductDescription = styled.div`
   font-family: 'Comfortaa';
-  font-size: 14px;
+  font-size: 16px;
   color: #731803;
 `;
