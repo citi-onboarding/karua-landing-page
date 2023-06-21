@@ -13,7 +13,7 @@ body, h1, ul {
   padding: 0;
 }
 
-  //display: flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
 

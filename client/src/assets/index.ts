@@ -18,7 +18,7 @@ export {
     YoutubeIcon,
     TikTokIcon,
     karuaCOLORIDA,
-     videoKarua2,
+    videoKarua2,
     arte2,
     arte1,
     arte3

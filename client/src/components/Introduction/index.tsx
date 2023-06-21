@@ -2,7 +2,6 @@ import  KaruaBRANCA  from "../../assets/karuaBRANCA.png";
 import { Intro, Video, BoxText, BoxImage, SameLevel, IntroBackground, IntroTitle, IntroTitleText, IntroText, IntroImg, IntroContent } from "./styles";
 import  videoKarua  from "../../assets/videoKarua.mp4";
 import React from 'react' ;
-import { url } from "inspector";
 
 
 export const Introd: React.ElementType = () => {

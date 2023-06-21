@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import videoKarua from '../../assets/videoKarua.mp4'
 
 export const Intro = styled.div`
   display: flex;
@@ -13,13 +12,12 @@ export const IntroBackground = styled.div`
   position: absolute;
   width: 100%;
   height: 745px;
-  z-index: -2;
-  //padding-top: 105px;
 `;
 
 export const Video = styled.video`
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 `;
 
 export const IntroTitle = styled.div`
