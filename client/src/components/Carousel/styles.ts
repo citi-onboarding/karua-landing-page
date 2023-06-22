@@ -7,11 +7,13 @@ export const SameLevel = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-bottom: 100px;
 `;
 
 export const CarouselBox = styled.div`
   flex-direction: row; 
   display: flex;
+  width: 100%;
 `;
 
 export const CarouselSectionContainer = styled.div`
