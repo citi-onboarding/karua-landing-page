@@ -7,8 +7,11 @@ import {arte1, arte2, arte3} from "../../assets";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
+import 'swiper/swiper.min.css'
+import 'swiper/modules/pagination/pagination.min.css'
+import 'swiper/swiper.min.css'
+import 'swiper/modules/navigation/navigation.min.css'
 
 
 SwiperCore.use([Navigation, Pagination]);
@@ -99,32 +102,15 @@ export const CarouselPage: React.FC = () => {
 
 export const CarouselSection: React.FC = () => {
 
-    const [link, setLink] = useState('');
-    const [url, setUrl] = useState('');
-    const [artist, setArtist] = useState('');
-    const [description, setDescription] = useState('');
-    const [productOne, setProductOne,] = useState('');
-    const [descriptionOne, setDescriptionOne] = useState('');
-    const [dimageOne, setImageOne] = useState('');
-    const [linkOne, setLinkOne] = useState('');
-    const [productTwo, setProductTwo,] = useState('');
-    const [descriptionTwo, setDescriptionTwo] = useState('');
-    const [dimageTwo, setImageTwo] = useState('');
-    const [linkTwo, setLinkTwo] = useState('');
-    const [productThree, setProductThree,] = useState('');
-    const [descriptionThree, setDescriptionThree] = useState('');
-    const [dimageThree, setImageThree] = useState('');
-    const [linkThree, setLinkThree] = useState('');
-
-    const [step, setStep] = useState<CarouselProps[]>([]);
-    const [stepsList, setStepsList] = useState<[]>([]);
+    const [card, setCard] = useState<CarouselProps[]>([]);
+    const [cardsList, setCardsList] = useState<[]>([]);
 
     useEffect(() => {
         axios.get('http://localhost:3001/artist')
         .then(res => {
             const dataFromGet = res.data;
 
-            setStepsList(dataFromGet)
+            setCardsList(dataFromGet)
 
         })
         .catch(err => {console.log(err)})
@@ -139,29 +125,30 @@ export const CarouselSection: React.FC = () => {
                 navigation
                 pagination={{ clickable: true }}
             >
-                {stepsList.map((step) => (
-                    <SwiperSlide key={step['id']}>
+                {cardsList.map((card) => (
+                    <SwiperSlide key={card['id']}>
                         <Carousel
-                            link={step["link"]}
-                            video={step['url']}
-                            artist={step['artist']}
-                            description={step['description']}
-                            productOne={step['productOne']}
-                            descriptionOne={step['descriptionOne']}
-                            imageOne={step['imageOne']}
-                            linkOne={step['linkOne']}
-                            productTwo={step['productTwo']}
-                            descriptionTwo={step['descriptionTwo']}
-                            imageTwo={step['imageTwo']}
-                            linkTwo={step['linkTwo']}
-                            productThree={step['productThree']}
-                            descriptionThree={step['descriptionThree']}
-                            imageThree={step['imageThree']}
-                            linkThree={step['linkThree']}
+                            link={card["link"]}
+                            video={card['url']}
+                            artist={card['artist']}
+                            description={card['description']}
+                            productOne={card['productOne']}
+                            descriptionOne={card['descriptionOne']}
+                            imageOne={card['imageOne']}
+                            linkOne={card['linkOne']}
+                            productTwo={card['productTwo']}
+                            descriptionTwo={card['descriptionTwo']}
+                            imageTwo={card['imageTwo']}
+                            linkTwo={card['linkTwo']}
+                            productThree={card['productThree']}
+                            descriptionThree={card['descriptionThree']}
+                            imageThree={card['imageThree']}
+                            linkThree={card['linkThree']}
                         />
-                    </SwiperSlide>
+                    </SwiperSlide> 
                 ))}
             </Swiper>
         </CarouselBox>
     );
 }
+
