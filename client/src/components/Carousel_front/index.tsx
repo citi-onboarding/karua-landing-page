@@ -4,6 +4,14 @@ ProductsComponents, ProductBox, ProductImageBox, InfoProductContainer, ProductNa
 } from "./styles";
 import videoKarua2  from "../../assets/videoKarua2.mp4";
 import {arte1, arte2, arte3} from "../../assets";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+
+SwiperCore.use([Navigation, Pagination]);
 
 type CarouselProps = {
 
@@ -79,6 +87,7 @@ export const Carousel = ({
 }
 
 export const CarouselPage: React.FC = () => {
+
     return(
         <SameLevel>
             <Title>Artistas</Title>
@@ -89,70 +98,70 @@ export const CarouselPage: React.FC = () => {
 
 
 export const CarouselSection: React.FC = () => {
-    return(
+
+    const [link, setLink] = useState('');
+    const [url, setUrl] = useState('');
+    const [artist, setArtist] = useState('');
+    const [description, setDescription] = useState('');
+    const [productOne, setProductOne,] = useState('');
+    const [descriptionOne, setDescriptionOne] = useState('');
+    const [dimageOne, setImageOne] = useState('');
+    const [linkOne, setLinkOne] = useState('');
+    const [productTwo, setProductTwo,] = useState('');
+    const [descriptionTwo, setDescriptionTwo] = useState('');
+    const [dimageTwo, setImageTwo] = useState('');
+    const [linkTwo, setLinkTwo] = useState('');
+    const [productThree, setProductThree,] = useState('');
+    const [descriptionThree, setDescriptionThree] = useState('');
+    const [dimageThree, setImageThree] = useState('');
+    const [linkThree, setLinkThree] = useState('');
+
+    const [step, setStep] = useState<CarouselProps[]>([]);
+    const [stepsList, setStepsList] = useState<[]>([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/artist')
+        .then(res => {
+            const dataFromGet = res.data;
+
+            setStepsList(dataFromGet)
+
+        })
+        .catch(err => {console.log(err)})
+
+    }, [])
+
+    return (
         <CarouselBox>
-            <CarouselSectionContainer>
-                <Carousel 
-                link={""}
-                video={videoKarua2}
-                artist={"Yasmin Soares"}
-                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-                productOne={"Nome da Arte1"}
-                descriptionOne={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageOne={arte1}
-                linkOne={""}
-                productTwo={"Nome da Arte2"}
-                descriptionTwo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageTwo={arte2}
-                linkTwo={""}
-                productThree={"Nome da Arte3"}
-                descriptionThree={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. "}
-                imageThree={arte3}
-                linkThree={""} 
-                />
-            </CarouselSectionContainer>
-
-            {/* <CarouselSectionContainer>
-                <Carousel 
-                link={""}
-                video={videoKarua2}
-                artist={"Yasmin Soares"}
-                description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-                productOne={"Nome da Arte1"}
-                descriptionOne={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageOne={arte1}
-                linkOne={""}
-                productTwo={"Nome da Arte2"}
-                descriptionTwo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageTwo={arte2}
-                linkTwo={""}
-                productThree={"Nome da Arte3"}
-                descriptionThree={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageThree={arte3}
-                linkThree={""} 
-                />
-            </CarouselSectionContainer>
-
-            <CarouselSectionContainer>
-                <Carousel 
-                link={""}
-                video={videoKarua2}
-                artist={"Yasmin Soares"}
-                description={"Essa é uma artista iniciante, mas com grande potencial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-                productOne={"Nome da Arte1"}
-                descriptionOne={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageOne={arte1}
-                linkOne={""}
-                productTwo={"Nome da Arte2"}
-                descriptionTwo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageTwo={arte2}
-                linkTwo={""}
-                productThree={"Nome da Arte3"}
-                descriptionThree={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."}
-                imageThree={arte3}
-                linkThree={""} 
-                />
-            </CarouselSectionContainer> */}
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                navigation
+                pagination={{ clickable: true }}
+            >
+                {stepsList.map((step) => (
+                    <SwiperSlide key={step['id']}>
+                        <Carousel
+                            link={step["link"]}
+                            video={step['url']}
+                            artist={step['artist']}
+                            description={step['description']}
+                            productOne={step['productOne']}
+                            descriptionOne={step['descriptionOne']}
+                            imageOne={step['imageOne']}
+                            linkOne={step['linkOne']}
+                            productTwo={step['productTwo']}
+                            descriptionTwo={step['descriptionTwo']}
+                            imageTwo={step['imageTwo']}
+                            linkTwo={step['linkTwo']}
+                            productThree={step['productThree']}
+                            descriptionThree={step['descriptionThree']}
+                            imageThree={step['imageThree']}
+                            linkThree={step['linkThree']}
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </CarouselBox>
     );
 }

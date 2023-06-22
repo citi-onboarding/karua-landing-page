@@ -16,9 +16,10 @@ export const CarouselBox = styled.div`
 
 export const CarouselSectionContainer = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: row; 
   align-items: center; 
   padding-bottom: 100px !important;
+  gap:100px;
 `;
 
 export const Title = styled.div`

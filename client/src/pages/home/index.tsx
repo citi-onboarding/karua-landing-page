@@ -1,6 +1,6 @@
 import React from "react";
 import { HomeContainer } from './styles';
-import { Footer, Carousel, NavBar, Introd,CarouselPage } from "../../components";
+import { Footer, NavBar, Introd, CarouselPage } from "../../components";
 
 
 export const Home: React.FC = () => {
@@ -8,7 +8,6 @@ export const Home: React.FC = () => {
         <HomeContainer>
             <NavBar></NavBar>
             <Introd></Introd>
-            <Carousel />
             <CarouselPage/>
             <Footer />
         </HomeContainer>
