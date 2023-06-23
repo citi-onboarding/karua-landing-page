@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Input, Select } from 'antd';
 
 export const StyledSubscriptionComponent = styled.div`
     display: flex;
@@ -116,3 +117,71 @@ export const FormTitle = styled.h1`
     text-align: center;
     color: #731803;
 `;
+
+export const NameInput = styled(Input)`
+    display: flex;
+    height: 50px;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+
+`;
+
+export const InputBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+`;
+
+export const EmailInput = styled(Input)`
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+
+`;
+
+export const CategorySelect = styled(Select)`
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+
+`;
+
+export const PhoneInput = styled(Input)`
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+
+`;
+
+export const MensageInput = styled(Input)`
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    height: 87px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+
+`;
+
+
+

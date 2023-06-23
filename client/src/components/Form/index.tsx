@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionForm, StyledSubscriptionField, StyledButton, ButtonContainer, FormContainer, FormTitle } from "./styles";
 //import apiAxios from "../../services/api";
 import axios from "axios";
+import {
+    Button,
+    Input,
+    Select,
+    Form,
+  } from 'antd';
+import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect} from "./styles";
+
 
 type SubscriptionFieldType = {
     labelTitle?: string;
@@ -27,22 +35,8 @@ export const SubscriptionComponent: React.FC = () => {
                 <SubscriptionContainer>
                     <SubscriptionForm />
                 </SubscriptionContainer>
-
             </StyledSubscriptionComponent>
         </FormContainer>
-    );
-}
-
-
-const SubscriptionField = ({ labelTitle, onChangeFunction }: SubscriptionFieldType) => {
-    return (
-        <StyledSubscriptionField>
-            <input 
-                type="text"
-                onChange={value => onChangeFunction(value.target.value)}
-                placeholder = {labelTitle}
-            />
-        </StyledSubscriptionField>
     );
 }
 
@@ -58,108 +52,140 @@ const SubscriptionForm: React.ElementType = () => {
     const [solutionDescribe, setSolutionDescribe] = useState("");
     const [site, setSite] = useState("");
 
-    // const handleSubmit = () => {
-    //     if (
-    //         firstName &&
-    //         phoneNumber &&
-    //         email &&
-    //         company &&
-    //         partnersNumber &&
-    //         segment &&
-    //         solutionDescribe
-    //     ) {
-
-        // apiAxios.post('/subscription',       
-    //         {
-    //             "firstName": firstName,
-    //             "phoneNumber": phoneNumber,
-    //             "email": email,
-    //             "company": company,
-    //             "partnersNumber": partnersNumber,
-    //             "segment": segment,
-    //             "solutionDescribe": solutionDescribe,
-    //             "site": site
-    //         }
-    //         ).then(log => {
-    //             console.log(log);
-    //             alert("Obrigado por sua inscrição!");
-    //         })
-    //         .catch(err => {
-    //             console.log(err);
-    //             alert("Houve um erro e a inscrição não foi concluída. Por favor, tente de novo.");
-    //         })
+    const onFinish = (values: any) => {
+        console.log('Success:', values);
+      };
     
-    //         apiAxios.post('/email',
-    //         {
-    //             "firstName": firstName,
-    //             "phoneNumber": phoneNumber,
-    //             "email": email,
-    //             "company": company,
-    //             "partnersNumber": partnersNumber,
-    //             "segment": segment,
-    //             "solutionDescribe": solutionDescribe,
-    //             "site": site
-    //         }
-    //         ).then(log => {console.log(log)})
-    //         .catch(err => {console.log(err)})
-            
-    //         console.log(
-    //             `
-    //             firstName: ${firstName}
-    //             phoneNumber: ${phoneNumber}
-    //             email: ${email}
-    //             company: ${company}
-    //             partnersNumber: ${partnersNumber}
-    //             segment: ${segment}
-    //             solutionDescribe: ${solutionDescribe}
-    //             site: ${site}
-    //             `
-    //         )
-    //     } else {
-    //         alert('É obrigatório preencher todos os campos, exceto de "Site:"');
-    //     }
-    // }
+      const onFinishFailed = (errorInfo: any) => {
+        console.log('Failed:', errorInfo);
+      };
 
+    return(
+        <StyledSubscriptionField>
+            <Form
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            >
+                <Form.Item
+                    name="nome"
+                    dependencies={['nome']}
+                    rules={[
+                    { required: true, message: 'Por favor digite seu nom!' },
+                    ({ getFieldValue }) => ({
+                        validator(_, value) {
+                        if (!value || getFieldValue('email') === value) {
+                            return Promise.resolve();
+                        }
+                        return Promise.reject(
+                            new Error(
+                            'The two passwords that you entered do not match!'
+                            )
+                        );
+                        }
+                    })
+                    ]}
+                >
+                    <NameInput placeholder="Nome" />
+                </Form.Item>
+                <InputBox>
+                    <Form.Item
+                        name="nome"
+                        dependencies={['nome']}
+                        rules={[
+                        { required: true, message: 'Por favor digite seu nom!' },
+                        ({ getFieldValue }) => ({
+                            validator(_, value) {
+                            if (!value || getFieldValue('email') === value) {
+                                return Promise.resolve();
+                            }
+                            return Promise.reject(
+                                new Error(
+                                'The two passwords that you entered do not match!'
+                                )
+                            );
+                            }
+                        })
+                        ]}
+                    >
+                        <EmailInput placeholder="E-mail" />
+                    </Form.Item>
+                    <Form.Item
+                        name="nome"
+                        dependencies={['nome']}
+                        rules={[
+                        { required: true, message: 'Por favor digite seu nom!' },
+                        ({ getFieldValue }) => ({
+                            validator(_, value) {
+                            if (!value || getFieldValue('email') === value) {
+                                return Promise.resolve();
+                            }
+                            return Promise.reject(
+                                new Error(
+                                'The two passwords that you entered do not match!'
+                                )
+                            );
+                            }
+                        })
+                        ]}
+                    >
+                        <PhoneInput placeholder="Telefone" />
+                    </Form.Item>
+                </InputBox>
+                <Form.Item
+                    name="nome"
+                    dependencies={['nome']}
+                    rules={[
+                    { required: true, message: 'Por favor digite seu nom!' },
+                    ({ getFieldValue }) => ({
+                        validator(_, value) {
+                        if (!value || getFieldValue('email') === value) {
+                            return Promise.resolve();
+                        }
+                        return Promise.reject(
+                            new Error(
+                            'The two passwords that you entered do not match!'
+                            )
+                        );
+                        }
+                    })
+                    ]}
+                >
+                    <CategorySelect placeholder="Categoria">
+                        <Option value="">Obras</Option>
+                        <Option value="">Souvenirs</Option>
+                        <Option value="">Vasos</Option>
+                    </CategorySelect>
+                </Form.Item>
+                <Form.Item
+                    name="nome"
+                    dependencies={['nome']}
+                    rules={[
+                    { required: true, message: 'Por favor digite seu nom!' },
+                    ({ getFieldValue }) => ({
+                        validator(_, value) {
+                        if (!value || getFieldValue('email') === value) {
+                            return Promise.resolve();
+                        }
+                        return Promise.reject(
+                            new Error(
+                            'The two passwords that you entered do not match!'
+                            )
+                        );
+                        }
+                    })
+                    ]}
+                >
+                    <MensageInput placeholder="Deixe sua mensagem" />
+                </Form.Item>
+                <ButtonContainer>
+                    <Form.Item>
+                        <StyledButton>ENVIAR</StyledButton>
+                    </Form.Item>
+                </ButtonContainer>
+            </Form>
+        </StyledSubscriptionField>
 
-    return (
-        <StyledSubscriptionForm>
-            <SubscriptionField 
-                labelTitle="Nome:"
-
-                onChangeFunction={setFirstName}
-            />
-
-            <SubscriptionField 
-                labelTitle="E-mail:"
-                
-                onChangeFunction={setEmail}
-            />
-
-            <SubscriptionField 
-                labelTitle="Telefone:"
-                
-                onChangeFunction={setCompany}
-            />
-
-            <SubscriptionField 
-                labelTitle="Categoria:"
-                
-                onChangeFunction={setSegment}
-            />
-            
-
-            <SubscriptionField 
-                labelTitle="Deixe sua mensagem:"
-                
-                onChangeFunction={setSolutionDescribe}
-            />
-
-            <ButtonContainer>
-                <StyledButton>             
-                        ENVIAR
-                </StyledButton>
-            </ButtonContainer>
-        </StyledSubscriptionForm>
-    );
+    )
 }
 
