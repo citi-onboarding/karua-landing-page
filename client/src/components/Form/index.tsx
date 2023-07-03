@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionForm, StyledSubscriptionField, StyledButton, ButtonContainer, FormContainer, FormTitle } from "./styles";
-//import apiAxios from "../../services/api";
 import axios from "axios";
 import {
     Button,
     Input,
     Select,
     Form,
+    Radio,
   } from 'antd';
 import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect} from "./styles";
 
@@ -43,14 +43,22 @@ export const SubscriptionComponent: React.FC = () => {
 
 const SubscriptionForm: React.ElementType = () => {
 
-    const [firstName, setFirstName] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-    const [company, setCompany] = useState("");
-    const [partnersNumber, setPartnersNumber] = useState("");
-    const [segment, setSegment] = useState("");
-    const [solutionDescribe, setSolutionDescribe] = useState("");
-    const [site, setSite] = useState("");
+    const [field, setField] = useState("");
+    const [message, setMessage] = useState("");
+
+    // const handleSubmit = async (data: any) => {
+    //     console.log(data);
+
+    //     try {
+    //         const response = await axios.post('http://localhost:3001/email', data);
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.log('error occurred while making post request', error);
+    //     }
+    // }
 
     const onFinish = (values: any) => {
         console.log('Success:', values);
@@ -65,115 +73,66 @@ const SubscriptionForm: React.ElementType = () => {
             <Form
             initialValues={{ remember: true }}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
+            onFinishFailed={onFinishFailed} 
             >
                 <Form.Item
-                    name="nome"
-                    dependencies={['nome']}
+                    name="name"
                     rules={[
-                    { required: true, message: 'Por favor digite seu nom!' },
-                    ({ getFieldValue }) => ({
-                        validator(_, value) {
-                        if (!value || getFieldValue('email') === value) {
-                            return Promise.resolve();
-                        }
-                        return Promise.reject(
-                            new Error(
-                            'The two passwords that you entered do not match!'
-                            )
-                        );
-                        }
-                    })
+                      {
+                        required: true,
+                        message: 'Por favor insira seu Nome!',
+                      },
                     ]}
                 >
                     <NameInput placeholder="Nome" />
                 </Form.Item>
                 <InputBox>
                     <Form.Item
-                        name="nome"
-                        dependencies={['nome']}
+                        name="email"
                         rules={[
-                        { required: true, message: 'Por favor digite seu nom!' },
-                        ({ getFieldValue }) => ({
-                            validator(_, value) {
-                            if (!value || getFieldValue('email') === value) {
-                                return Promise.resolve();
-                            }
-                            return Promise.reject(
-                                new Error(
-                                'The two passwords that you entered do not match!'
-                                )
-                            );
-                            }
-                        })
+
+                          {
+                            required: true,
+                            message: 'Por favor insira seu E-mail!',
+                          },
                         ]}
                     >
                         <EmailInput placeholder="E-mail" />
                     </Form.Item>
                     <Form.Item
-                        name="nome"
-                        dependencies={['nome']}
+                        name="phone"
                         rules={[
-                        { required: true, message: 'Por favor digite seu nom!' },
-                        ({ getFieldValue }) => ({
-                            validator(_, value) {
-                            if (!value || getFieldValue('email') === value) {
-                                return Promise.resolve();
-                            }
-                            return Promise.reject(
-                                new Error(
-                                'The two passwords that you entered do not match!'
-                                )
-                            );
-                            }
-                        })
+                          {
+                            required: true,
+                            message: 'Por favor insira seu Telefone!',
+                          },
                         ]}
                     >
                         <PhoneInput placeholder="Telefone" />
                     </Form.Item>
                 </InputBox>
                 <Form.Item
-                    name="nome"
-                    dependencies={['nome']}
+                    name="field"
                     rules={[
-                    { required: true, message: 'Por favor digite seu nom!' },
-                    ({ getFieldValue }) => ({
-                        validator(_, value) {
-                        if (!value || getFieldValue('email') === value) {
-                            return Promise.resolve();
-                        }
-                        return Promise.reject(
-                            new Error(
-                            'The two passwords that you entered do not match!'
-                            )
-                        );
-                        }
-                    })
+                      {
+                        required: true,
+                        message: 'Por favor selecione sua Categoria!',
+                      },
                     ]}
                 >
-                    <CategorySelect placeholder="Categoria">
-                        <Option value="">Obras</Option>
-                        <Option value="">Souvenirs</Option>
-                        <Option value="">Vasos</Option>
-                    </CategorySelect>
+                    <Radio.Group>
+                        <Radio value="a">Obras</Radio>
+                        <Radio value="b">Souvenirs</Radio>
+                        <Radio value="c">Vasos</Radio>
+                    </Radio.Group>
                 </Form.Item>
                 <Form.Item
-                    name="nome"
-                    dependencies={['nome']}
+                    name="message"
                     rules={[
-                    { required: true, message: 'Por favor digite seu nom!' },
-                    ({ getFieldValue }) => ({
-                        validator(_, value) {
-                        if (!value || getFieldValue('email') === value) {
-                            return Promise.resolve();
-                        }
-                        return Promise.reject(
-                            new Error(
-                            'The two passwords that you entered do not match!'
-                            )
-                        );
-                        }
-                    })
+                    {
+                        required: true,
+                        message: 'Por favor insira sua Mensagem!',
+                    },
                     ]}
                 >
                     <MensageInput placeholder="Deixe sua mensagem" />

@@ -11,7 +11,7 @@ const SendMail = async (request: Request, response: Response) => {
     } = request.body;
 
     await MailServer({
-      destinationUser: process.env.EMAIL,
+      destinationUser: process.env.EMAIL_WILL_RECEIVE,
       subjectText: 'Um lead entrou em contato',
       htmlOption: `<p>
         Um usuário entrou em contato. Esse usuário tem o nome ${name} e apresenta o email ${email} e o telefone ${phone} na categoria ${field}. Esse usuário deixou a seguinte mensagem: ${message}
@@ -19,7 +19,7 @@ const SendMail = async (request: Request, response: Response) => {
     });
 
     return response.status(200).send({
-      answer: 'Enviado.',
+      answer: 'Enviado.', 
     });
   } catch (error) {
     return response.status(500).send({
