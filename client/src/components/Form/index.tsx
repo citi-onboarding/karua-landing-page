@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionForm, StyledSubscriptionField, StyledButton, ButtonContainer, FormContainer, FormTitle } from "./styles";
 import axios from "axios";
 import {
-    Button,
-    Input,
-    Select,
     Form,
-    Radio,
   } from 'antd';
-import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect, FieldTitle} from "./styles";
+import { NameInput, ImageBox, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect, FieldTitle, SelectBox} from "./styles";
+
 
 
 type SubscriptionFieldType = {
@@ -118,11 +115,11 @@ const SubscriptionForm: React.ElementType = () => {
                 >
                     <CategorySelect>
                         <FieldTitle>Categoria</FieldTitle>
-                        <Radio.Group>
-                            <Radio value="Obras">Obras</Radio>
-                            <Radio value="Souvenirs">Souvenirs</Radio>
-                            <Radio value="Vasos">Vasos</Radio>
-                        </Radio.Group>
+                        <SelectBox.Group>
+                            <SelectBox value="Obras">Obras</SelectBox>
+                            <SelectBox value="Souvenirs">Souvenirs</SelectBox>
+                            <SelectBox value="Vasos">Vasos</SelectBox>
+                        </SelectBox.Group>
                     </CategorySelect>
                 </Form.Item>
                 <Form.Item

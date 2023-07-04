@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Input } from 'antd';
+import { Input, Radio } from 'antd';
 import { Xilosa, Confortaa } from '../../assets';
 
 
@@ -140,6 +140,10 @@ export const NameInput = styled(Input)`
     color: #731803 !important;
     width: 1036px !important;
 
+    &::placeholder{
+        color: #731803;
+    }
+
 `;
 
 export const InputBox = styled.div`
@@ -164,6 +168,10 @@ export const EmailInput = styled(Input)`
     background-color: #F5F5F5;
     width: 550px !important;
 
+    &::placeholder{
+        color: #731803;
+    }
+
 `;
 
 export const CategorySelect = styled.div`
@@ -180,7 +188,7 @@ export const CategorySelect = styled.div`
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
-    gap: 15px;
+    gap: 40px;
     flex-direction: row;
     align-itens: center;
 
@@ -200,6 +208,10 @@ export const PhoneInput = styled(Input)`
     border-radius: 20px;
     background-color: #F5F5F5;
     width: 471px !important;
+
+    &::placeholder{
+        color: #731803;
+    }
 `;
 
 export const MensageInput = styled(Input)`
@@ -220,14 +232,38 @@ export const MensageInput = styled(Input)`
     justify-content: center;
     gap: 15px;
 
+    &::placeholder{
+        color: #731803;
+    }
+
 `;
 
 export const FieldTitle = styled.h1`
     font-size: 20px;
     text-align: left;
-    color: rgb(165, 165, 165);
+    color: #731803;
     font-weight: 400;
+    margin-top: -5px !important;
+
 `;
 
+export const SelectBox = styled(Radio)`
+    align-itens: center;
+    font-size: 20px;
+    
+    @font-face {
+        font-family: 'Confortaa';
+        src: url(${Confortaa}) format('woff');
+    }
+    font-family: 'Confortaa';
+    color: #731803;
 
+`;
 
+export const ImageBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    `;

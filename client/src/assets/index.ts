@@ -6,6 +6,7 @@ import YoutubeIcon from './youtubeIcon.svg'
 import Confortaa from './Comfortaa/Comfortaa-Regular.ttf';
 import Xilosa from './xilosa/xilosa_.ttf';
 
+
 export {
     LogoCITi,
     InstaIcon,
@@ -13,7 +14,7 @@ export {
     YoutubeIcon,
     karuauCOLORIDA,
     Confortaa,
-    Xilosa
+    Xilosa,
 };
 
 
