@@ -49,20 +49,16 @@ const SubscriptionForm: React.ElementType = () => {
     const [field, setField] = useState("");
     const [message, setMessage] = useState("");
 
-    // const handleSubmit = async (data: any) => {
-    //     console.log(data);
+    const handleSubmit = async (data: any) => {
+        console.log(data);
 
-    //     try {
-    //         const response = await axios.post('http://localhost:3001/email', data);
-    //         console.log(response);
-    //     } catch (error) {
-    //         console.log('error occurred while making post request', error);
-    //     }
-    // }
-
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
-      };
+        try {
+            const response = await axios.post('http://localhost:3001/mail', data);
+            console.log(response);
+        } catch (error) {
+            console.log('error occurred while making post request', error);
+        }
+    }
     
       const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
@@ -72,7 +68,7 @@ const SubscriptionForm: React.ElementType = () => {
         <StyledSubscriptionField>
             <Form
             initialValues={{ remember: true }}
-            onFinish={onFinish}
+            onFinish={handleSubmit}
             onFinishFailed={onFinishFailed} 
             >
                 <Form.Item
@@ -121,9 +117,9 @@ const SubscriptionForm: React.ElementType = () => {
                     ]}
                 >
                     <Radio.Group>
-                        <Radio value="a">Obras</Radio>
-                        <Radio value="b">Souvenirs</Radio>
-                        <Radio value="c">Vasos</Radio>
+                        <Radio value="Obras">Obras</Radio>
+                        <Radio value="Souvenirs">Souvenirs</Radio>
+                        <Radio value="Vasos">Vasos</Radio>
                     </Radio.Group>
                 </Form.Item>
                 <Form.Item
