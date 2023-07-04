@@ -1,7 +1,7 @@
 import express from 'express';
 import UserController from '@controllers/UserController'
 import ArtistController from '@controllers/ArtistsController';
-import SendEmail from '@controllers/mailController'
+import SendEmail from '@controllers/MailController'
 
 const routes = express.Router();
 const userController = new UserController();

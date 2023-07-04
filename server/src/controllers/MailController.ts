@@ -1,6 +1,8 @@
 import dotenv from 'dotenv';
 import { Request, Response } from 'express';
-import MailServer from '../util/mailHandler';
+import { MailServer } from "src/services/MailServer";
+
+dotenv.config();
 
 dotenv.config();
 
