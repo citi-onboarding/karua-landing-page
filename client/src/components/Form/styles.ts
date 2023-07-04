@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Input, Select } from 'antd';
+import { Input } from 'antd';
+import { Xilosa, Confortaa } from '../../assets';
+
 
 export const StyledSubscriptionComponent = styled.div`
     display: flex;
@@ -107,10 +109,14 @@ export const ButtonContainer = styled.div`
 export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
-
 `;
 
 export const FormTitle = styled.h1`
+
+    @font-face {
+        font-family: 'Xilosa';
+        src: url(${Xilosa}) format('woff');
+    }
     font-family: Xilosa;
     font-size: 48px;
     font-weight: 400;
@@ -119,6 +125,11 @@ export const FormTitle = styled.h1`
 `;
 
 export const NameInput = styled(Input)`
+    @font-face {
+        font-family: 'Confortaa';
+        src: url(${Confortaa}) format('woff');
+    }
+    font-family: 'Confortaa';
     display: flex;
     height: 50px;
     font-size: 20px;
@@ -126,6 +137,8 @@ export const NameInput = styled(Input)`
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
+    color: #731803 !important;
+    width: 1036px !important;
 
 `;
 
@@ -133,54 +146,87 @@ export const InputBox = styled.div`
     display: flex;
     flex-direction: row;
     align-itens: center;
+    gap: 15px;
 `;
 
 export const EmailInput = styled(Input)`
+    @font-face {
+        font-family: 'Confortaa';
+        src: url(${Confortaa}) format('woff');
+    }
+    font-family: 'Confortaa';
     display: flex;
-    width: 100%;
     font-size: 20px;
     height: 50px;
     padding: 15px;
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
+    width: 550px !important;
 
 `;
 
-export const CategorySelect = styled(Select)`
+export const CategorySelect = styled.div`
+
+    @font-face {
+        font-family: 'Confortaa';
+        src: url(${Confortaa}) format('woff');
+    }
+    font-family: 'Confortaa';
     display: flex;
-    width: 100%;
     font-size: 20px;
     height: 50px;
     padding: 15px;
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
+    gap: 15px;
+    flex-direction: row;
+    align-itens: center;
 
 `;
 
 export const PhoneInput = styled(Input)`
+    @font-face {
+        font-family: 'Confortaa';
+        src: url(${Confortaa}) format('woff');
+    }
+    font-family: 'Confortaa';
     display: flex;
-    width: 100%;
     font-size: 20px;
     padding: 15px;
     height: 50px;
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
-
+    width: 471px !important;
 `;
 
 export const MensageInput = styled(Input)`
+
+    @font-face {
+        font-family: 'Confortaa';
+        src: url(${Confortaa}) format('woff');
+    }
+    font-family: 'Confortaa';
     display: flex;
-    width: 100%;
     font-size: 20px;
     padding: 15px;
     height: 87px;
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
+    align-itens: center;
+    justify-content: center;
+    gap: 15px;
 
+`;
+
+export const FieldTitle = styled.h1`
+    font-size: 20px;
+    text-align: left;
+    color: rgb(165, 165, 165);
+    font-weight: 400;
 `;
 
 

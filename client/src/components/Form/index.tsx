@@ -8,7 +8,7 @@ import {
     Form,
     Radio,
   } from 'antd';
-import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect} from "./styles";
+import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect, FieldTitle} from "./styles";
 
 
 type SubscriptionFieldType = {
@@ -116,11 +116,14 @@ const SubscriptionForm: React.ElementType = () => {
                       },
                     ]}
                 >
-                    <Radio.Group>
-                        <Radio value="Obras">Obras</Radio>
-                        <Radio value="Souvenirs">Souvenirs</Radio>
-                        <Radio value="Vasos">Vasos</Radio>
-                    </Radio.Group>
+                    <CategorySelect>
+                        <FieldTitle>Categoria</FieldTitle>
+                        <Radio.Group>
+                            <Radio value="Obras">Obras</Radio>
+                            <Radio value="Souvenirs">Souvenirs</Radio>
+                            <Radio value="Vasos">Vasos</Radio>
+                        </Radio.Group>
+                    </CategorySelect>
                 </Form.Item>
                 <Form.Item
                     name="message"
@@ -131,7 +134,7 @@ const SubscriptionForm: React.ElementType = () => {
                     },
                     ]}
                 >
-                    <MensageInput placeholder="Deixe sua mensagem" />
+                    <MensageInput placeholder="Deixe sua mensagem"/>
                 </Form.Item>
                 <ButtonContainer>
                     <Form.Item>
