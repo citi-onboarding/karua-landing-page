@@ -8,7 +8,7 @@ export const Introd: React.ElementType = () => {
     return (
         <Intro>
             <IntroBackground>
-                <Video src={ videoKarua } autoPlay loop muted style={{ width: "100%" }} />
+                <Video src="https://www.shutterstock.com/shutterstock/videos/1098174247/preview/stock-footage-close-up-of-the-process-of-creating-the-clay-figure-of-woman-s-face-sculptor-modelling-sculpture.webm" autoPlay loop muted style={{ width: "100%" }} />
             </IntroBackground>
             <IntroContent>
                 <IntroTitle> QUEM SOMOS? </IntroTitle>
