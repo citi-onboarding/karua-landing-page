@@ -2,8 +2,6 @@ import React from "react";
 import {SameLevel, Title, Video, CarouselBox, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, Link, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
-import videoKarua2  from "../../assets/videoKarua2.mp4";
-import {arte1, arte2, arte3} from "../../assets";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SwiperCore, { Navigation, Pagination } from 'swiper';
@@ -35,7 +33,7 @@ type CarouselProps = {
     descriptionThree:	string;
     imageThree:	string;
     linkThree:	string;
-
+  
 };
 
 type SliderProps = {
