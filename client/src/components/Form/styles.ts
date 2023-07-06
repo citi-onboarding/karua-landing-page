@@ -101,6 +101,7 @@ export const ButtonContainer = styled.div`
 export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 `;
 
 export const FormTitle = styled.h1`
@@ -251,4 +252,11 @@ export const SelectBox = styled(Radio)`
     font-family: 'Confortaa';
     color: #731803;
 
+`;
+
+export const HatImage = styled.img`
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 50px;
 `;

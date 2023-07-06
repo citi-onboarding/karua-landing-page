@@ -4,8 +4,8 @@ import axios from "axios";
 import {
     Form,
   } from 'antd';
-import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect, FieldTitle, SelectBox} from "./styles";
-
+import { NameInput, InputBox, PhoneInput, HatImage, EmailInput, MensageInput, CategorySelect, FieldTitle, SelectBox} from "./styles";
+import { Hats } from '../../assets'
 
 
 export const SubscriptionComponent: React.FC = () => {
@@ -17,6 +17,7 @@ export const SubscriptionComponent: React.FC = () => {
                     <SubscriptionForm />
                 </SubscriptionContainer>
             </StyledSubscriptionComponent>
+            <HatImage src = {Hats}/>
         </FormContainer>
     );
 }

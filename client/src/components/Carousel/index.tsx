@@ -1,5 +1,5 @@
 import React from "react";
-import {SameLevel, Title, Video, CarouselBox, CarouselSectionContainer,CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
+import {SameLevel, Title, Video, CarouselBox, CarouselSectionContainer, CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, Link, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
 import { useState, useEffect } from "react";
@@ -10,7 +10,6 @@ import 'swiper/swiper.min.css'
 import 'swiper/modules/pagination/pagination.min.css'
 import 'swiper/swiper.min.css'
 import 'swiper/modules/navigation/navigation.min.css'
-import { ClientRequest } from "http";
 
 
 SwiperCore.use([Navigation, Pagination]);
