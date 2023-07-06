@@ -7,6 +7,7 @@ export const StyledSubscriptionComponent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px !important;
 `;
 
 export const SubscriptionContainer = styled.div`
@@ -37,15 +38,6 @@ export const SubscriptionContainer = styled.div`
     }
 `;
 
-export const StyledSubscriptionForm = styled.div`
-    width: 100%;
-
-    padding: 20px 20px;
-
-    @media (max-width: 500px) {
-        padding: 0;
-    }
-`;
 
 export const StyledSubscriptionField = styled.div`
     display: flex;
@@ -122,6 +114,7 @@ export const FormTitle = styled.h1`
     font-weight: 400;
     text-align: center;
     color: #731803;
+    padding-bottom: 50px !important;
 `;
 
 export const NameInput = styled(Input)`
@@ -259,11 +252,3 @@ export const SelectBox = styled(Radio)`
     color: #731803;
 
 `;
-
-export const ImageBox = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    `;

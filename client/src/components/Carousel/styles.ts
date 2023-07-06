@@ -7,7 +7,8 @@ export const SameLevel = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  padding-top: 35px;
 `;
 
 export const CarouselBox = styled.div`
@@ -35,6 +36,7 @@ export const Title = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
   color: #731803;
+  padding-bottom: 20px;
 `;
 
 export const CarouselContainer = styled.div`
@@ -83,6 +85,10 @@ export const ArtistDescription = styled.div`
   color: #731803;
   padding-left: 4%;
   padding-right: 4%;
+  height: 150px;
+  align-items: center;
+  display: flex;
+  padding-bottom: 20px;
 
 `;
 

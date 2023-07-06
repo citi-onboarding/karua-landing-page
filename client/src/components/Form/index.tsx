@@ -1,28 +1,12 @@
 import React, { useState } from "react";
-import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionForm, StyledSubscriptionField, StyledButton, ButtonContainer, FormContainer, FormTitle } from "./styles";
+import { StyledSubscriptionComponent, SubscriptionContainer, StyledSubscriptionField, StyledButton, ButtonContainer, FormContainer, FormTitle } from "./styles";
 import axios from "axios";
 import {
     Form,
   } from 'antd';
-import { NameInput, ImageBox, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect, FieldTitle, SelectBox} from "./styles";
+import { NameInput, InputBox, PhoneInput, EmailInput, MensageInput, CategorySelect, FieldTitle, SelectBox} from "./styles";
 
 
-
-type SubscriptionFieldType = {
-    labelTitle?: string;
-    onChangeFunction: Function;
-}
-
-type Subscription = {
-    firstName: string;
-    phoneNumber: string;
-    email: string;
-    company: string;
-    partnersNumber: number;
-    segment: string;
-    solutionDescribe: string;
-    site: string;
-}
 
 export const SubscriptionComponent: React.FC = () => {
     return (
