@@ -7,18 +7,24 @@ export const SameLevel = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-bottom: 100px;
 `;
 
 export const CarouselBox = styled.div`
   flex-direction: row; 
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
 `;
 
 export const CarouselSectionContainer = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: row; 
   align-items: center; 
   padding-bottom: 100px !important;
+  width: center;
 `;
 
 export const Title = styled.div`
@@ -40,6 +46,10 @@ export const CarouselContainer = styled.div`
   flex-direction: column; 
   align-items: center; 
   padding-bottom: 100px !important;
+  margin-left: 50px;
+  margin-bottom: 70px;
+  slideResponsive: 2;
+
 `;
 
 export const VideoContainer = styled.div` 
@@ -122,4 +132,8 @@ export const ProductDescription = styled.div`
   font-family: 'Comfortaa';
   font-size: 16px;
   color: #731803;
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
 `;
