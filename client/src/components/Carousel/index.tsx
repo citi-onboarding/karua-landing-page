@@ -104,7 +104,7 @@ export const CarouselPage: React.FC = () => {
 
     return(
         <SameLevel>
-            <Title>Artistas</Title>
+            <Title id="Artists" >Artistas</Title>
             <CarouselSection/>
         </SameLevel>
     );
