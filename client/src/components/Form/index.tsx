@@ -25,25 +25,23 @@ export const SubscriptionComponent: React.FC = () => {
 
 const SubscriptionForm: React.ElementType = () => {
 
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
-    const [email, setEmail] = useState("");
-    const [field, setField] = useState("");
-    const [message, setMessage] = useState("");
-
     const handleSubmit = async (data: any) => {
         console.log(data);
 
         try {
             const response = await axios.post('http://localhost:3001/mail', data);
             console.log(response);
+            alert("Obrigado por sua inscrição!");
         } catch (error) {
             console.log('error occurred while making post request', error);
+            alert("Houve um erro e a inscrição não foi concluída.");
         }
     }
     
       const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
+        alert("Houve um erro e a inscrição não foi concluída.");
+
       };
 
     return(
@@ -109,12 +107,6 @@ const SubscriptionForm: React.ElementType = () => {
                 </Form.Item>
                 <Form.Item
                     name="message"
-                    rules={[
-                    {
-                        required: true,
-                        message: 'Por favor insira sua Mensagem!',
-                    },
-                    ]}
                 >
                     <MensageInput placeholder="Deixe sua mensagem"/>
                 </Form.Item>

@@ -4,19 +4,17 @@ import { MailServer } from "src/services/MailServer";
 
 dotenv.config();
 
-dotenv.config();
-
 const SendMail = async (request: Request, response: Response) => {
   try {
     const {
-      name, email, phone, message, field,
+      name, email, phone, message, field
     } = request.body;
 
     await MailServer({
       destinationUser: process.env.EMAIL_WILL_RECEIVE,
-      subjectText: 'Um lead entrou em contato',
+      subjectText: 'Um futuro comprador entrou em contato',
       htmlOption: `<p>
-        Um usuário entrou em contato. Esse usuário tem o nome ${name} e apresenta o email ${email} e o telefone ${phone} na categoria ${field}. Esse usuário deixou a seguinte mensagem: ${message}
+        Um futuro comprador entrou em contato. Esse futuro comprador tem o nome ${name} e apresenta o email ${email} e o telefone ${phone} na categoria ${field}. Esse futuro comprador deixou a seguinte mensagem: ${message}
       </p>`,
     });
 
