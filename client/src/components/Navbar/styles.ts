@@ -45,14 +45,14 @@ export const NavPages = styled.div`
 `;
 
 export const NavTag = styled.div`
-  font-family: 'Comfortaa';
+  font-family: 'Confortaa';
   color: #731803;
   font-size: inherit;
 `;
 
 export const NavButton = styled.button`
   background: transparent;
-  font-family: 'Comfortaa';
+  font-family: 'CoNfortaa';
   border: 1.5px solid #731803;
   border-radius: 10px;
   font-size: inherit;

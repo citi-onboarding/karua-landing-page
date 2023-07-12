@@ -11,7 +11,7 @@ export const Introd: React.ElementType = () => {
                 <Video src={videoKarua} autoPlay loop muted style={{ width: "100%" }} />
             </IntroBackground>
             <IntroContent>
-                <IntroTitle id="AboutUs"> QUEM SOMOS? </IntroTitle>
+                <IntroTitle id="SobreNós"> QUEM SOMOS? </IntroTitle>
                 <SameLevel>
                     <BoxText>
                         <IntroTitleText> Somos a Karuá! </IntroTitleText>

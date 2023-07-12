@@ -11,7 +11,7 @@ import { Hats } from '../../assets'
 export const SubscriptionComponent: React.FC = () => {
     return (
         <FormContainer>
-            <FormTitle>GOSTARIA DE ADQUIRIR UMA PEÇA? FALE CONOSCO!</FormTitle>
+            <FormTitle id="Obras">GOSTARIA DE ADQUIRIR UMA PEÇA? FALE CONOSCO!</FormTitle>
             <StyledSubscriptionComponent>         
                 <SubscriptionContainer>
                     <SubscriptionForm />

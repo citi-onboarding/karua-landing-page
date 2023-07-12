@@ -12,17 +12,17 @@ export const NavBar: React.FC = () => {
             />
             <NavPages>
                 <NavTag>
-                    <a href="#AboutUs">Sobre Nós</a>
+                    <a href="#SobreNós">Sobre Nós</a>
                 </NavTag>
                 <NavTag>
-                    <a href="#Artists">Artistas</a>
+                    <a href="#Artistas">Artistas</a>
                 </NavTag>
                 <NavTag>
-                    <a href="#">Obras</a>
+                    <a href="#Obras">Obras</a>
                 </NavTag>
                 <NavButton>
                     <NavTag>
-                        <a href="#Contact">Contato</a>
+                        <a href="#FaleConosco">Fale conosco</a>
                     </NavTag>
                 </NavButton>
             </NavPages>   

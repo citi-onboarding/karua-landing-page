@@ -6,7 +6,7 @@ import React from 'react'
 export const Footer = () => {
     return (
         <FooterContainer>
-            <CenterContainer id="Contact"> 
+            <CenterContainer id="FaleConosco"> 
                 <a href="https://www.instagram.com/karua.arte/">
                     <SocialMediaContainer>
                         <SocialMediaIcons>
