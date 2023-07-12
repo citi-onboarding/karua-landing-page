@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Confortaa } from '../../assets';
 
+
+
 export const SameLevel = styled.div`
   background: #F5F5F5;
   display: flex;
@@ -113,6 +115,8 @@ export const ProductImageBox = styled.div`
   width: 135px;
   height: 135px;
   overflow: hidden;
+  align-itens: center;
+  justify-content: center;
 `;
 
 export const InfoProductContainer = styled.div`
@@ -144,3 +148,4 @@ export const ProductDescription = styled.div`
 export const Link = styled.a`
   text-decoration: none;
 `;
+

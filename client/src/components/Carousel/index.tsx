@@ -5,11 +5,10 @@ ProductsComponents, ProductBox, Link, ProductImageBox, InfoProductContainer, Pro
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
-import 'swiper/swiper.min.css'
-import 'swiper/modules/pagination/pagination.min.css'
-import 'swiper/swiper.min.css'
-import 'swiper/modules/navigation/navigation.min.css'
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import 'swiper/swiper.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
+import 'swiper/modules/navigation/navigation.min.css';
 
 
 SwiperCore.use([Navigation, Pagination]);
@@ -70,7 +69,7 @@ export const Carousel = ({
             <ProductsComponents>
                     <Link href = {linkOne}>
                         <ProductBox>
-                            <ProductImageBox><img src = {imageOne} /></ProductImageBox>
+                        <ProductImageBox><img src = {imageOne} style={{width: "135px", height: "135px"}}/></ProductImageBox>
                             <InfoProductContainer>
                                 <ProductName> {productOne} </ProductName>
                                 <ProductDescription> {descriptionOne} </ProductDescription>
@@ -79,7 +78,7 @@ export const Carousel = ({
                     </Link>
                     <Link href = {linkTwo}>
                         <ProductBox>
-                            <ProductImageBox><img src = {imageTwo} /></ProductImageBox>
+                            <ProductImageBox><img src = {imageTwo} style={{width: "135px", height: "135px"}}/></ProductImageBox>
                             <InfoProductContainer>
                                 <ProductName> {productTwo} </ProductName>
                                 <ProductDescription> {descriptionTwo} </ProductDescription>
@@ -88,7 +87,7 @@ export const Carousel = ({
                     </Link>
                     <Link href = {linkThree}>
                         <ProductBox>
-                            <ProductImageBox><img src = {imageThree} /></ProductImageBox>
+                            <ProductImageBox><img src = {imageThree}style={{width: "135px", height: "135px"}}/></ProductImageBox>
                             <InfoProductContainer>
                                 <ProductName> {productThree} </ProductName>
                                 <ProductDescription> {descriptionThree}  </ProductDescription>
@@ -128,14 +127,26 @@ export const CarouselSection: React.FC = ({slideResponsive}: SliderProps) => {
 
     }, [])
 
+    var width = window. screen. width;
 
+    if (width < 1100) {
+        slideResponsive = 1;
+    }
+
+    else if (width > 1900) {
+        slideResponsive = 3;
+    }
+
+    else {
+        slideResponsive = 2;
+    }
 
 
     return (
         <CarouselBox>
             <Swiper
                 spaceBetween={50}
-                slidesPerView={2}
+                slidesPerView={slideResponsive}
                 navigation
                 pagination={{ clickable: true }}
 
