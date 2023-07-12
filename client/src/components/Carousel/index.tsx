@@ -57,7 +57,7 @@ export const Carousel = ({
     linkThree}: CarouselProps) => {
     return (
         <CarouselContainer>
-            <Link href={link} target="_blank">
+            <Link target="_blank" href={link}>
                 <VideoContainer> 
                     <Video src={video} autoPlay loop muted style={{width: "100%", height: "auto" }} />
                 </VideoContainer>
@@ -67,7 +67,7 @@ export const Carousel = ({
                 <ArtistDescription> {description} </ArtistDescription>
             </ArtistComponent>
             <ProductsComponents>
-                    <Link href = {linkOne}>
+                    <Link target="_blank" href = {linkOne}>
                         <ProductBox>
                         <ProductImageBox><img src = {imageOne} style={{width: "135px", height: "135px"}}/></ProductImageBox>
                             <InfoProductContainer>
@@ -76,7 +76,7 @@ export const Carousel = ({
                             </InfoProductContainer>
                         </ProductBox>
                     </Link>
-                    <Link href = {linkTwo}>
+                    <Link target="_blank" href = {linkTwo}>
                         <ProductBox>
                             <ProductImageBox><img src = {imageTwo} style={{width: "135px", height: "135px"}}/></ProductImageBox>
                             <InfoProductContainer>
@@ -85,7 +85,7 @@ export const Carousel = ({
                             </InfoProductContainer>
                         </ProductBox>
                     </Link>
-                    <Link href = {linkThree}>
+                    <Link target="_blank" href = {linkThree}>
                         <ProductBox>
                             <ProductImageBox><img src = {imageThree}style={{width: "135px", height: "135px"}}/></ProductImageBox>
                             <InfoProductContainer>

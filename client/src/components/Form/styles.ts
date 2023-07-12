@@ -123,10 +123,6 @@ export const InputBox = styled.div`
     gap: 15px;
     width: 100%;
     justify-content: center;
-
-    @media (max-width: 768px) {
-        flex-direction: column; 
-    }
 `;
 
 export const EmailInput = styled(Input)`

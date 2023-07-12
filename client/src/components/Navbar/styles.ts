@@ -73,10 +73,12 @@ export const NavTag = styled.div`
 export const NavButton = styled.button`
   background: transparent;
   font-family: 'Confortaa';
-  border: 1.5px solid #731803;
+  border: 2px solid #731803;
   border-radius: 10px;
   padding: 8px 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-weight: 550;
+  font-size: 16px;
 
   @media (max-width: 768px) {
     border: none;

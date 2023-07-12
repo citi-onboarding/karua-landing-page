@@ -16,10 +16,13 @@ export const Introd: React.ElementType = () => {
                     <BoxText>
                         <IntroTitleText> Somos a Karuá! </IntroTitleText>
                         <IntroText>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            A Karuá, é uma iniciativa dedicada a promover e preservar a arte dos pífanos pernambucanos. Nosso objetivo é valorizar e divulgar os artistas, buscamos conectar esses artistas com um público nacional e internacional, permitindo que suas obras sejam apreciadas e adquiridas em todo o mundo.
                         </IntroText>
                         <IntroText>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Além disso, estamos comprometidos em melhorar a qualidade de vida da comunidade local, direcionando os recursos obtidos com as vendas para projetos de incentivo à promoção artística e desenvolvimento da região. Somos apaixonados pela cultura pernambucana e acreditamos no poder transformador da arte.
+                        </IntroText>
+                        <IntroText>
+                            Junte-se a nós nessa jornada de preservação e difusão da nossa rica cultura, ajudando a garantir que a arte pernambucana continue a brilhar e a encantar gerações futuras.
                         </IntroText>
                     </BoxText>
                     <BoxImage>

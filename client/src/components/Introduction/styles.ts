@@ -70,7 +70,7 @@ export const BoxText = styled.div`
   width: 50%;
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 90% !important;
   }
 
   @media (max-width: 1100px){
