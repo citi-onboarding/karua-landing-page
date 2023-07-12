@@ -23,7 +23,7 @@ export const Introd: React.ElementType = () => {
                         </IntroText>
                     </BoxText>
                     <BoxImage>
-                        <IntroImg src={KaruaBRANCA}/>
+                        <IntroImg src={KaruaBRANCA} object-fit="contain"/>
                     </BoxImage>
                 </SameLevel>
             </IntroContent>

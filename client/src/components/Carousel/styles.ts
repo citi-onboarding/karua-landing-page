@@ -51,9 +51,17 @@ export const CarouselContainer = styled.div`
   flex-direction: column; 
   align-items: center; 
   padding-bottom: 100px !important;
-  margin-left: 50px;
-  margin-bottom: 70px;
-  slideResponsive: 2;
+  // margin-left: 50px;
+  // margin-bottom: 70px;
+  margin: auto;
+  margin-bottom: 70px !important;
+  
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 1350px;
+    padding-bottom: 0px !important;
+    margin: auto;
+  }
 
 `;
 
@@ -65,6 +73,11 @@ export const Video = styled.video`
   border-radius: 25px 25px 0px 0px;
   width: 530px;
   height: 360px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const ArtistComponent = styled.div`
@@ -80,6 +93,10 @@ export const ArtistName = styled.div`
   font-family: 'Xilosa';
   font-size: 36px;
   color: #731803;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const ArtistDescription = styled.div`
@@ -92,6 +109,12 @@ export const ArtistDescription = styled.div`
   align-items: center;
   display: flex;
   padding-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
 
 `;
 
@@ -108,6 +131,12 @@ export const ProductBox = styled.div`
   margin-right: 10px;
   margin-left: 10px;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ProductImageBox = styled.div`
@@ -129,6 +158,11 @@ export const InfoProductContainer = styled.div`
   width: 360px;
   height: 127px;
   color: #731803;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const ProductName = styled.div`
@@ -137,12 +171,20 @@ export const ProductName = styled.div`
   margin-bottom: 15px;
   font-size: 34px;
   color: #731803;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 export const ProductDescription = styled.div`
   font-family: 'Confortaa';
   font-size: 14px;
   color: #731803;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Link = styled.a`
