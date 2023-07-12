@@ -7,18 +7,33 @@ export const Intro = styled.div`
   justify-content: center;
   width: 100%;
   height: 745px;
+  
+  @media (max-width: 768px) {
+    background: #731803;
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
 `;
 
 export const IntroBackground = styled.div`
   position: absolute;
   width: 100%;
   height: 745px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Video = styled.video`
   height: 100%;
   object-fit: cover;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const IntroTitle = styled.div`
@@ -39,6 +54,11 @@ export const IntroTitleText = styled.div`
   font-size: 64px;
   white-space: nowrap;
   width: 100%;
+
+  @media (max-width: 950px) {
+    font-size: 40px;
+    text-align: center;
+  }
 `;
 
 export const BoxText = styled.div`
@@ -48,6 +68,20 @@ export const BoxText = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1100px){
+    width: 40%;
+  }
+
+  @media (max-width: 950px) {
+    text-align: justify;
+    align-items: center;
+  }
+
 `;
 
 export const SameLevel = styled.div`
@@ -75,6 +109,10 @@ export const BoxImage = styled.div`
   margin-top: 0%;
   margin-right: 0 important!; 
   margin-left: 0 important!;
+
+  @media (max-width: 950px) {
+    display: none;
+  }
 `;
 
 export const IntroImg = styled.img`

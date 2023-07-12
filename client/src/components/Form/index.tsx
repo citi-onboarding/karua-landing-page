@@ -49,7 +49,10 @@ const SubscriptionForm: React.ElementType = () => {
             <Form
             initialValues={{ remember: true }}
             onFinish={handleSubmit}
-            onFinishFailed={onFinishFailed} 
+            onFinishFailed={onFinishFailed}
+            style={{
+                width: "100%"
+            }}
             >
                 <Form.Item
                     name="name"
@@ -72,17 +75,24 @@ const SubscriptionForm: React.ElementType = () => {
                             message: 'Por favor insira seu E-mail!',
                           },
                         ]}
+                        style={{
+                            width: "60%"
+                        }}
                     >
                         <EmailInput placeholder="E-mail" />
                     </Form.Item>
                     <Form.Item
                         name="phone"
                         rules={[
+                            
                           {
                             required: true,
                             message: 'Por favor insira seu Telefone!',
                           },
                         ]}
+                        style={{
+                            width: "40%"
+                        }}
                     >
                         <PhoneInput placeholder="Telefone" />
                     </Form.Item>

@@ -8,6 +8,8 @@ export const StyledSubscriptionComponent = styled.div`
     justify-content: center;
     align-items: center;
     padding-bottom: 50px !important;
+    width: 85%;
+
 `;
 
 export const SubscriptionContainer = styled.div`
@@ -17,24 +19,16 @@ export const SubscriptionContainer = styled.div`
     align-items: center;
     
     height: 515px;
-    width: 1181px;
+    width: 100%;
     border-radius: 20px;
 
     padding: 30px 60px;
 
     background-color: #731803;
 
-    h2{
-        font-size: 45px;
-        text-align: center;
-
-        @media (max-width: 500px) {
-            font-size: 36px;
-        }
-    }
-
-    @media (max-width: 500px) {
-        padding: 30px 20px;
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
     }
 `;
 
@@ -45,36 +39,9 @@ export const StyledSubscriptionField = styled.div`
     justify-content: center;
     align-items: center;
     color: #731803;
-    margin: 20px 0;
-    
-    input{
+    margin: 20px 0; 
+    width: 100%;
 
-        display: flex;
-        
-        width: 100%;
-        
-        font-size: 20px;
-        
-        padding: 15px;
-        
-        border: none;
-        border-radius: 20px;
-
-        background-color: #F5F5F5;
-        
-
-        #solutionDescribe{
-            min-height: 120px;
-        }
-
-        input::placeholder {
-            color: red;
-        }
-
-        @media (max-width: 500px) {
-            width: 90%;
-        }
-    }
 `;
 
 export const StyledButton = styled.button`
@@ -102,6 +69,11 @@ export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100% !important;
+     
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const FormTitle = styled.h1`
@@ -132,10 +104,14 @@ export const NameInput = styled(Input)`
     border-radius: 20px;
     background-color: #F5F5F5;
     color: #731803 !important;
-    width: 1036px !important;
+    width: 100% !important;
 
     &::placeholder{
         color: #731803;
+    }
+
+    @media (max-width: 768px) {
+        width: 100% !important;
     }
 
 `;
@@ -145,6 +121,12 @@ export const InputBox = styled.div`
     flex-direction: row;
     align-itens: center;
     gap: 15px;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column; 
+    }
 `;
 
 export const EmailInput = styled(Input)`
@@ -160,10 +142,14 @@ export const EmailInput = styled(Input)`
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
-    width: 550px !important;
+    width: 100% !important;
 
     &::placeholder{
         color: #731803;
+    }
+
+    @media (max-width: 768px) {
+        width: 100% !important;
     }
 
 `;
@@ -186,6 +172,11 @@ export const CategorySelect = styled.div`
     flex-direction: row;
     align-itens: center;
 
+    @media (max-width: 768px) {
+        width: 100% !important;
+        height: 100px;
+    }
+
 `;
 
 export const PhoneInput = styled(Input)`
@@ -201,10 +192,15 @@ export const PhoneInput = styled(Input)`
     border: none;
     border-radius: 20px;
     background-color: #F5F5F5;
-    width: 471px !important;
+    //width: 100% !important;
 
     &::placeholder{
         color: #731803;
+    }
+
+    @media (max-width: 768px) {
+        width: 100% !important;
+        
     }
 `;
 
@@ -230,6 +226,11 @@ export const MensageInput = styled(Input)`
         color: #731803;
     }
 
+    @media (max-width: 768px) {
+        width: 100% !important;
+        height: 50px;
+    }
+
 `;
 
 export const FieldTitle = styled.h1`
@@ -239,11 +240,16 @@ export const FieldTitle = styled.h1`
     font-weight: 400;
     margin-top: -5px !important;
 
+    @media (max-width: 768px) {
+        display: none;
+    }
+
 `;
 
 export const SelectBox = styled(Radio)`
     align-itens: center;
     font-size: 20px;
+
     
     @font-face {
         font-family: 'Confortaa';
@@ -252,6 +258,10 @@ export const SelectBox = styled(Radio)`
     font-family: 'Confortaa';
     color: #731803;
 
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
+
 `;
 
 export const HatImage = styled.img`
@@ -259,4 +269,8 @@ export const HatImage = styled.img`
     height: 100%;
     object-fit: cover;
     padding-bottom: 50px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;

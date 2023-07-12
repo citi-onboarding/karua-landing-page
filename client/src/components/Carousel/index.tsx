@@ -1,5 +1,5 @@
 import React from "react";
-import {SameLevel, Title, Video, CarouselBox, CarouselSectionContainer, CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
+import {SameLevel, Title, Video, CarouselBox, CarouselContainer, VideoContainer, ArtistComponent, ArtistName, ArtistDescription,
 ProductsComponents, ProductBox, Link, ProductImageBox, InfoProductContainer, ProductName, ProductDescription 
 } from "./styles";
 import { useState, useEffect } from "react";
@@ -112,7 +112,6 @@ export const CarouselPage: React.FC = () => {
 
 export const CarouselSection: React.FC = ({slideResponsive}: SliderProps) => {
 
-    const [card, setCard] = useState<CarouselProps[]>([]);
     const [cardsList, setCardsList] = useState<[]>([]);
 
     useEffect(() => {
