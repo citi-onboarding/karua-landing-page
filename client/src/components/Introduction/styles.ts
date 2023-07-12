@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Confortaa } from '../../assets';
 
 export const Intro = styled.div`
   display: flex;
@@ -59,7 +60,7 @@ export const SameLevel = styled.div`
 
 export const IntroText = styled.div`
   padding-top: 5%;
-  font-family: 'Comfortaa';
+  font-family: 'Confortaa';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

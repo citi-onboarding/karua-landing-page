@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Confortaa } from '../../assets';
 
 export const NavegBar = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ export const NavegBar = styled.div`
   padding-right: 25%;
   padding-left: 10%;
 
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Confortaa';
   font-style: normal;
   font-weight: 700;
   font-size: 100%; // 18px
@@ -44,16 +45,16 @@ export const NavPages = styled.div`
 `;
 
 export const NavTag = styled.div`
+  font-family: 'Comfortaa';
   color: #731803;
-  font-family: inherit;
   font-size: inherit;
 `;
 
 export const NavButton = styled.button`
   background: transparent;
+  font-family: 'Comfortaa';
   border: 1.5px solid #731803;
   border-radius: 10px;
-  font-family: inherit;
   font-size: inherit;
   padding: 8px 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

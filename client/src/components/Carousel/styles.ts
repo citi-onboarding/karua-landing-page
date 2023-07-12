@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Confortaa } from '../../assets';
 
 export const SameLevel = styled.div`
   background: #F5F5F5;
@@ -80,8 +81,8 @@ export const ArtistName = styled.div`
 `;
 
 export const ArtistDescription = styled.div`
-  font-family: 'Comfortaa';
-  font-size: 18px;
+  font-family: 'Confortaa';
+  font-size: 16px;
   color: #731803;
   padding-left: 4%;
   padding-right: 4%;
@@ -115,8 +116,8 @@ export const ProductImageBox = styled.div`
 `;
 
 export const InfoProductContainer = styled.div`
-  font-family: 'Comfortaa';
-  font-size: 18px;
+  font-family: 'Confortaa';
+  font-size: 16px;
   gap: 8px;
   margin-left: 10px;
   flex-direction: column; 
@@ -135,8 +136,8 @@ export const ProductName = styled.div`
 `;
 
 export const ProductDescription = styled.div`
-  font-family: 'Comfortaa';
-  font-size: 16px;
+  font-family: 'Confortaa';
+  font-size: 14px;
   color: #731803;
 `;
 
