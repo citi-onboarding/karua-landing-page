@@ -16,7 +16,7 @@ export const Introd: React.ElementType = () => {
                     <BoxText>
                         <IntroTitleText> Somos a Karuá! </IntroTitleText>
                         <IntroText>
-                            A Karuá, é uma iniciativa dedicada a promover e preservar a arte dos pífanos pernambucanos. Nosso objetivo é valorizar e divulgar os artistas, buscamos conectar esses artistas com um público nacional e internacional, permitindo que suas obras sejam apreciadas e adquiridas em todo o mundo.
+                            A Karuá é uma iniciativa dedicada a promover e preservar a arte dos pífanos pernambucanos. Nosso objetivo é valorizar e divulgar os artistas, buscamos conectar esses artistas com um público nacional e internacional, permitindo que suas obras sejam apreciadas e adquiridas em todo o mundo.
                         </IntroText>
                         <IntroText>
                             Além disso, estamos comprometidos em melhorar a qualidade de vida da comunidade local, direcionando os recursos obtidos com as vendas para projetos de incentivo à promoção artística e desenvolvimento da região. Somos apaixonados pela cultura pernambucana e acreditamos no poder transformador da arte.

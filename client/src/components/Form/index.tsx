@@ -29,7 +29,7 @@ const SubscriptionForm: React.ElementType = () => {
         console.log(data);
 
         try {
-            const response = await axios.post('http://localhost:3001/mail', data);
+            const response = await axios.post('https://api-karua.onrender.com/mail', data);
             console.log(response);
             alert("Obrigado por sua inscrição!");
         } catch (error) {

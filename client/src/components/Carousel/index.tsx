@@ -103,7 +103,7 @@ export const CarouselPage: React.FC = () => {
 
     return(
         <SameLevel>
-            <Title id="Artistas" >Artistas</Title>
+            <Title id="Artistas" >ARTISTAS</Title>
             <CarouselSection/>
         </SameLevel>
     );
@@ -115,7 +115,7 @@ export const CarouselSection: React.FC = ({slideResponsive}: SliderProps) => {
     const [cardsList, setCardsList] = useState<[]>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/artist')
+        axios.get('https://api-karua.onrender.com/artist')
         .then(res => {
             const dataFromGet = res.data;
 
